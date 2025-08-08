@@ -1,5 +1,13 @@
 {
   "dependencies": {
+    "com.esotericsoftware.spine.timeline": {
+      "version": "file:/Users/lwr/Downloads/com.esotericsoftware.spine.timeline-4.2",
+      "depth": 0,
+      "source": "local",
+      "dependencies": {
+        "com.unity.timeline": "1.2.10"
+      }
+    },
     "com.unity.burst": {
       "version": "1.8.18",
       "depth": 1,
