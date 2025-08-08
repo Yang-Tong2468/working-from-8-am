@@ -25,15 +25,8 @@ namespace PixelCrushers
         static CheckInputManagerSettings()
         {
             var filename = $"{Application.dataPath}/{CheckedFlagFilename}";
-            try
-            {
-                var hasAlreadyChecked = File.Exists(filename);
-                if (hasAlreadyChecked) return;
-            }
-            catch (System.Exception)
-            {
-                return; 
-            }
+            var hasAlreadyChecked = File.Exists(filename);
+            if (hasAlreadyChecked) return;
 
             File.WriteAllText(filename, $"Checked TMPro & Input System defines on {System.DateTime.Now}");
 

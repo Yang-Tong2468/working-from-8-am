@@ -42,7 +42,7 @@ namespace PixelCrushers
         [SerializeField]
         private bool m_useDefaultLanguageForBlankTranslations = true;
 
-        private static string s_currentLanguage = string.Empty;
+        private string m_currentLanguage = string.Empty;
 
         public LocalizedFonts localizedFonts { get { return m_localizedFonts; } set { m_localizedFonts = value; } }
 
@@ -83,7 +83,6 @@ namespace PixelCrushers
         {
             s_instance = null;
             s_isQuitting = false;
-            s_currentLanguage = string.Empty;
         }
 #endif
 
@@ -117,11 +116,11 @@ namespace PixelCrushers
         {
             get
             {
-                return s_currentLanguage;
+                return instance.m_currentLanguage;
             }
             set
             {
-                s_currentLanguage = value;
+                instance.m_currentLanguage = value;
                 instance.UpdateUIs(value);
             }
         }
@@ -141,8 +140,6 @@ namespace PixelCrushers
             set { m_saveLanguageInPlayerPrefs = value; }
         }
 
-        public static bool hasRecordedLanguageChange => !string.IsNullOrEmpty(s_currentLanguage);
-
         public bool useDefaultLanguageForBlankTranslations
         {
             get { return m_useDefaultLanguageForBlankTranslations; }
@@ -161,7 +158,7 @@ namespace PixelCrushers
             {
                 if (!string.IsNullOrEmpty(currentLanguagePlayerPrefsKey) && PlayerPrefs.HasKey(currentLanguagePlayerPrefsKey))
                 {
-                    s_currentLanguage = PlayerPrefs.GetString(currentLanguagePlayerPrefsKey);
+                    m_currentLanguage = PlayerPrefs.GetString(currentLanguagePlayerPrefsKey);
                     languageChanged?.Invoke(currentLanguage);
                 }
             }
@@ -241,7 +238,7 @@ namespace PixelCrushers
         /// <param name="language">Language code defined in your Text Table.</param>
         public void UpdateUIs(string language)
         {
-            s_currentLanguage = language;
+            m_currentLanguage = language;
             languageChanged?.Invoke(language);
             if (saveLanguageInPlayerPrefs)
             {
