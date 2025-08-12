@@ -15,7 +15,7 @@ public class SlotToSceneManager : MonoBehaviour
     public SkeletonAnimation skeletonAnimation;
     public SlotSceneMapping[] slotMappings = new SlotSceneMapping[]
     {
-        new SlotSceneMapping { slotName = "图书馆", targetScene = "Library" },
+        new SlotSceneMapping { slotName = "图书馆", targetScene = "Campus" },
         new SlotSceneMapping { slotName = "食堂", targetScene = "Restaurant" },
         new SlotSceneMapping { slotName = "宿舍", targetScene = "Apartment" },
         new SlotSceneMapping { slotName = "学院", targetScene = "Gym" },
@@ -84,7 +84,7 @@ public class SlotClickHandler : MonoBehaviour
         if (!string.IsNullOrEmpty(targetSceneName))
         {
             Debug.Log($"Clicked on {gameObject.name}, loading scene: {targetSceneName}");
-            SceneManager.LoadScene(targetSceneName);
+            SimpleSpineTransition.LoadScene(targetSceneName);
         }
     }
 

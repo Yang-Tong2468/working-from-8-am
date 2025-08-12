@@ -11,7 +11,7 @@ public class BuildingClickToScene : MonoBehaviour
         // 鼠标点击时跳转场景
         if (!string.IsNullOrEmpty(targetSceneName))
         {
-            SceneManager.LoadScene(targetSceneName);
+            SimpleSpineTransition.LoadScene(targetSceneName);
         }
     }
 }

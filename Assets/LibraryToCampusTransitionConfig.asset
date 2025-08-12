@@ -1,0 +1,25 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7b72070cf647c704980acad9c8f0ef00, type: 3}
+  m_Name: LibraryToCampusTransitionConfig
+  m_EditorClassIdentifier: 
+  spineSkeletonDataAsset: {fileID: 11400000, guid: ef7b5b3eda0cc0742a5d3ba3e6d136a5,
+    type: 2}
+  startAnimationName: idle
+  loopAnimationName: idle
+  endAnimationName: idle
+  loopAnimation: 1
+  canvasSortingOrder: 100
+  minLoadingTime: 2
+  pauseGameDuringTransition: 1
+  animationScale: {x: 1, y: 1, z: 1}
+  animationPosition: {x: 0, y: 0, z: 0}
