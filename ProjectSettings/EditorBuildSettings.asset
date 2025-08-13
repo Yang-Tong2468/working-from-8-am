@@ -14,18 +14,27 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Campus.unity
     guid: 0acfe7d302a7f734db5e799056749dae
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/Apartment.unity
     guid: d5549a25efaac884bb02b6b5d9fd7a48
   - enabled: 1
     path: Assets/Scenes/Gym.unity
-    guid: fc9351cf7a208d242bca0773409eb9f8
+    guid: fea519edf0160ee4bbcf8f519e652474
+  - enabled: 1
+    path: Assets/Scenes/Shop.unity
+    guid: d050abc6fd9489f41b86cb9d6357b643
+  - enabled: 1
+    path: Assets/Scenes/Restroom.unity
+    guid: f4afb5ad440b75745a6f0c20e8aad030
   - enabled: 1
     path: Assets/Scenes/Library.unity
-    guid: da6c5ff2404c50d4aa9edcfe2d53f22a
+    guid: 2962fbf71cd3ce640834b6b480d32777
+  - enabled: 1
+    path: Assets/Scenes/School.unity
+    guid: 1ddcf65febe46b74494d9903512fe72f
   - enabled: 1
     path: Assets/Scenes/Restaurant.unity
-    guid: 85211cec4865ac844a35d404532cadb8
+    guid: e10aa6146d4fcc94886b3ea95dcedc33
   - enabled: 1
     path: Assets/Scenes/Map 1.unity
     guid: c50035b1a3dc4934ba19ffeaa047e811

@@ -13,19 +13,33 @@ public class DirectSpineTimelineController : MonoBehaviour
     
     void Start()
     {
+        // 确保Time.timeScale正常
+        if (Time.timeScale == 0f)
+        {
+            Debug.LogWarning("Time.timeScale为0，设置为1以启用动画");
+            Time.timeScale = 1f;
+        }
+        
         if (skeletonAnimation == null)
         {
             Debug.LogError("请拖入SkeletonAnimation组件!");
             return;
         }
         
-        // 直接播放翻书动画
-        PlayBookAnimation();
+        // 延迟播放，确保组件完全初始化
+        Invoke(nameof(PlayBookAnimation), 0.1f);
     }
     
     void PlayBookAnimation()
     {
         Debug.Log("🎬 直接播放翻书动画...");
+        
+        // 再次确保Time.timeScale正常
+        if (Time.timeScale == 0f)
+        {
+            Time.timeScale = 1f;
+            Debug.Log("修复了Time.timeScale");
+        }
         
         // 检查SkeletonAnimation状态
         if (skeletonAnimation.Skeleton == null)
@@ -40,6 +54,9 @@ public class DirectSpineTimelineController : MonoBehaviour
             ForceComplete();
             return;
         }
+        
+        // 确保时间缩放正常
+        skeletonAnimation.timeScale = 1f;
         
         // 检查对象可见性
         var renderer = skeletonAnimation.GetComponent<Renderer>();

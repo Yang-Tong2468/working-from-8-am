@@ -188,6 +188,16 @@ public class SimpleSpineTransition : MonoBehaviour
         isTransitioning = true;
         onTransitionStart.Invoke();
 
+        // 验证场景名称
+        if (string.IsNullOrEmpty(sceneName))
+        {
+            Debug.LogError("❌ 场景名称为空，无法加载场景!");
+            isTransitioning = false;
+            yield break;
+        }
+
+        Debug.Log($"🎬 开始加载场景: {sceneName}");
+
         // 设置Canvas和动画
         SetupTransitionCanvas();
         CreateSpineGraphic();
@@ -205,6 +215,25 @@ public class SimpleSpineTransition : MonoBehaviour
         // 开始异步加载场景
         float startTime = Time.realtimeSinceStartup;
         AsyncOperation asyncLoad = SceneManager.LoadSceneAsync(sceneName);
+        
+        // 检查场景加载是否成功开始
+        if (asyncLoad == null)
+        {
+            Debug.LogError($"❌ 无法加载场景: {sceneName} - 场景可能不存在或未添加到Build Settings");
+            
+            // 清理并结束
+            if (transitionCanvas != null)
+            {
+                transitionCanvas.SetActive(false);
+            }
+            if (pauseGame)
+            {
+                Time.timeScale = 1f;
+            }
+            isTransitioning = false;
+            yield break;
+        }
+        
         asyncLoad.allowSceneActivation = false;
 
         // 等待场景加载完成且满足最小时间
@@ -233,6 +262,8 @@ public class SimpleSpineTransition : MonoBehaviour
 
         onTransitionEnd.Invoke();
         isTransitioning = false;
+        
+        Debug.Log($"✅ 场景加载完成: {sceneName}");
     }
 
     public static void LoadScene(string sceneName)

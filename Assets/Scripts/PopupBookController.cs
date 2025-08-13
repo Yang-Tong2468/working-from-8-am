@@ -48,55 +48,15 @@ public class PopupBookController : MonoBehaviour
             Debug.Log($"Timeline Director: {timelineDirector.name}");
             Debug.Log($"Playable Asset: {timelineDirector.playableAsset?.name ?? "未分配"}");
             Debug.Log($"Timeline状态: {timelineDirector.state}");
-            Debug.Log($"Timeline长度: {timelineDirector.duration}");
-            
-            if (timelineDirector.playableAsset == null)
+
+            if (timelineDirector.playableAsset != null)
             {
-                Debug.LogError("❌ Timeline没有Playable Asset! 请将PopupBook2Timeline.playable拖入PlayableDirector");
-                timelineComplete = true;
-                SetupSlotClickHandlers();
-                yield break;
-            }
-            
-            // 检查绑定
-            var outputs = timelineDirector.playableAsset.outputs;
-            bool hasBindings = false;
-            foreach (var output in outputs)
-            {
-                var binding = timelineDirector.GetGenericBinding(output.sourceObject);
-                if (binding != null)
-                {
-                    Debug.Log($"✅ Track '{output.streamName}' → {binding.name}");
-                    hasBindings = true;
-                }
-                else
-                {
-                    Debug.LogError($"❌ Track '{output.streamName}' 未绑定!");
-                }
-            }
-            
-            if (!hasBindings)
-            {
-                Debug.LogError("❌ 没有绑定任何Track到SkeletonAnimation!");
-                Debug.Log("解决方法: 打开Timeline窗口，将SkeletonAnimation拖到每个Track左侧");
-            }
-            
-            // 强制从头开始播放
-            timelineDirector.time = 0;
-            timelineDirector.Play();
-            Debug.Log("🎬 Timeline开始播放...");
-            
-            // 等待一帧确保播放开始
-            yield return null;
-            
-            // 检查Timeline是否真的在播放
-            if (timelineDirector.state != PlayState.Playing)
-            {
-                Debug.LogWarning($"⚠️ Timeline没有开始播放! 当前状态: {timelineDirector.state}");
-                Debug.Log("Timeline可能长度为0或立即完成，直接启用点击");
-            }
-            else
-            {
+                // 确保Timeline从头开始播放
+                timelineDirector.time = 0;
+                timelineDirector.Play();
+                
+                Debug.Log("✅ Timeline开始播放...");
+
                 // 监控播放状态，最多等待30秒
                 float maxWaitTime = 30f;
                 float waitTime = 0f;
@@ -164,6 +124,13 @@ public class PopupBookController : MonoBehaviour
 
         Debug.Log($"点击了slot: {mapping.slotName}, 加载场景: {mapping.targetScene}");
 
+        // 检查场景名称是否有效
+        if (string.IsNullOrEmpty(mapping.targetScene))
+        {
+            Debug.LogError($"❌ Slot '{mapping.slotName}' 的目标场景名称为空! 请在Inspector中配置targetScene字段");
+            return;
+        }
+
         // 选择过场动画
         var transitionAnim = mapping.transitionAnimation != null ? 
             mapping.transitionAnimation : defaultTransitionAnimation;
@@ -200,39 +167,71 @@ public class PopupBookController : MonoBehaviour
     {
         timelineComplete = true;
         SetupSlotClickHandlers();
-        Debug.Log("外部触发Timeline完成");
+        Debug.Log("已启用PopupBookController的点击功能!");
     }
 
-    // 调试：列出所有slots
-    [ContextMenu("列出所有Slots")]
-    void ListAllSlots()
+    // 检查slot映射配置
+    [ContextMenu("检查Slot映射配置")]
+    void CheckSlotMappings()
     {
-        if (skeletonAnimation == null || skeletonAnimation.Skeleton == null)
+        Debug.Log("=== 检查Slot映射配置 ===");
+        
+        if (slotMappings == null || slotMappings.Length == 0)
         {
-            Debug.LogError("SkeletonAnimation未正确初始化");
+            Debug.LogWarning("❌ 没有配置任何Slot映射!");
             return;
         }
 
-        Debug.Log("=== 所有可用的Slots ===");
-        var slots = skeletonAnimation.Skeleton.Slots;
-        for (int i = 0; i < slots.Count; i++)
+        for (int i = 0; i < slotMappings.Length; i++)
         {
-            var slot = slots.Items[i];
-            Debug.Log($"Slot {i}: {slot.Data.Name} (Attachment: {slot.Attachment?.Name ?? "无"})");
+            var mapping = slotMappings[i];
+            Debug.Log($"Slot {i + 1}:");
+            Debug.Log($"  - slotName: '{mapping.slotName}' {(string.IsNullOrEmpty(mapping.slotName) ? "❌ 空" : "✅")}");
+            Debug.Log($"  - targetScene: '{mapping.targetScene}' {(string.IsNullOrEmpty(mapping.targetScene) ? "❌ 空" : "✅")}");
+            Debug.Log($"  - transitionAnimation: {(mapping.transitionAnimation != null ? mapping.transitionAnimation.name : "未设置")}");
+            Debug.Log($"  - animationName: '{mapping.animationName}'");
         }
+
+        if (defaultTransitionAnimation != null)
+        {
+            Debug.Log($"✅ 默认过场动画: {defaultTransitionAnimation.name}");
+        }
+        else
+        {
+            Debug.LogWarning("⚠️ 未设置默认过场动画");
+        }
+
+        Debug.Log("=== 配置检查完成 ===");
+    }
+
+    // 创建默认slot映射
+    [ContextMenu("创建默认Slot映射")]
+    void CreateDefaultSlotMappings()
+    {
+        slotMappings = new SlotSceneMapping[]
+        {
+            new SlotSceneMapping { slotName = "school", targetScene = "School" },
+            new SlotSceneMapping { slotName = "shop", targetScene = "Shop" },
+            new SlotSceneMapping { slotName = "fengdi", targetScene = "Restaurant" },
+            new SlotSceneMapping { slotName = "gym", targetScene = "Gym" },
+            new SlotSceneMapping { slotName = "library", targetScene = "Library" },
+            new SlotSceneMapping { slotName = "restroom", targetScene = "Restroom" }
+        };
+        
+        Debug.Log("✅ 已创建默认Slot映射配置");
     }
 }
 
-// 简化的点击处理器
+// 简单的点击处理器
 public class SimpleSlotClickHandler : MonoBehaviour
 {
     private PopupBookController.SlotSceneMapping mapping;
     private PopupBookController controller;
 
-    public void Setup(PopupBookController.SlotSceneMapping slotMapping, PopupBookController ctrl)
+    public void Setup(PopupBookController.SlotSceneMapping mapping, PopupBookController controller)
     {
-        mapping = slotMapping;
-        controller = ctrl;
+        this.mapping = mapping;
+        this.controller = controller;
     }
 
     void OnMouseDown()
@@ -243,8 +242,13 @@ public class SimpleSlotClickHandler : MonoBehaviour
         }
     }
 
-    void OnMouseEnter()
+    void OnTriggerEnter2D(Collider2D other)
     {
-        Debug.Log($"鼠标进入: {mapping?.slotName}");
+        Debug.Log($"Mouse entered {mapping?.slotName ?? "unknown"}_Clickable");
+    }
+
+    void OnTriggerExit2D(Collider2D other)
+    {
+        Debug.Log($"Mouse exited {mapping?.slotName ?? "unknown"}_Clickable");
     }
 }
