@@ -138,6 +138,10 @@ GameObject:
   - component: {fileID: 1322625118}
   - component: {fileID: 1322625119}
   - component: {fileID: 1322625121}
+  - component: {fileID: 1322625122}
+  - component: {fileID: 1322625123}
+  - component: {fileID: 1322625124}
+  - component: {fileID: 1322625125}
   m_Layer: 0
   m_Name: PopupBook2
   m_TagString: Untagged
@@ -401,6 +405,101 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 7.009058, y: 7.030145}
   m_EdgeRadius: 0
+--- !u!114 &1322625122
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1322625112}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: aed4413091a468547a9024a8b601e52a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  skeletonAnimation: {fileID: 1322625114}
+  timelineDirector: {fileID: 1322625113}
+  slotMappings:
+  - slotName: book
+    targetScene: Campus
+    transitionAnimation: {fileID: 0}
+    animationName: 
+  - slotName: door
+    targetScene: 
+    transitionAnimation: {fileID: 0}
+    animationName: 
+  - slotName: gym
+    targetScene: Gym
+    transitionAnimation: {fileID: 0}
+    animationName: 
+  - slotName: library
+    targetScene: Library
+    transitionAnimation: {fileID: 0}
+    animationName: 
+  - slotName: restaurant
+    targetScene: Restaurant
+    transitionAnimation: {fileID: 0}
+    animationName: 
+  - slotName: restroom
+    targetScene: Restroom
+    transitionAnimation: {fileID: 0}
+    animationName: 
+  - slotName: school
+    targetScene: School
+    transitionAnimation: {fileID: 0}
+    animationName: 
+  - slotName: shop
+    targetScene: Shop
+    transitionAnimation: {fileID: 0}
+    animationName: 
+  - slotName: fengdi
+    targetScene: 
+    transitionAnimation: {fileID: 0}
+    animationName: 
+  defaultTransitionAnimation: {fileID: 11400000, guid: 4a78b1b4d60a542279a4a63056e1eb59,
+    type: 2}
+--- !u!114 &1322625123
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1322625112}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 89db60f9b38c4044a82a78459cc31653, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  timelineDirector: {fileID: 1322625113}
+  skeletonAnimation: {fileID: 1322625114}
+--- !u!114 &1322625124
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1322625112}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 330c78cdd77860b4c93f168b6c803ca9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  skeletonAnimation: {fileID: 1322625114}
+  bookOpenAnimation: gym
+  animationDuration: 3
+--- !u!114 &1322625125
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1322625112}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 376c5531467a82d4491c5716bea573a9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  skeletonAnimation: {fileID: 1322625114}
 --- !u!1 &1706300234
 GameObject:
   m_ObjectHideFlags: 0
@@ -479,7 +578,7 @@ GameObject:
   - component: {fileID: 1706355184}
   - component: {fileID: 1706355183}
   m_Layer: 0
-  m_Name: GameObject
+  m_Name: SimpleSpineTransition
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -501,8 +600,12 @@ MonoBehaviour:
     type: 2}
   animationName: 
   loopAnimation: 1
-  minTransitionTime: 2
+  minTransitionTime: 3
   pauseGame: 1
+  animationScale: {x: 1, y: 1, z: 1}
+  animationOffset: {x: 0, y: -200}
+  fitToScreen: 1
+  screenFitScale: 1
   onTransitionStart:
     m_PersistentCalls:
       m_Calls: []

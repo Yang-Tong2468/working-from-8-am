@@ -19,10 +19,24 @@ public class SimpleSpineTransition : MonoBehaviour
     
     [Header("过场设置")]
     [Tooltip("最小过场时间（秒）")]
-    public float minTransitionTime = 2f;
+    public float minTransitionTime = 3f;
     
     [Tooltip("过场时暂停游戏")]
     public bool pauseGame = true;
+    
+    [Header("动画显示设置")]
+    [Tooltip("动画缩放大小")]
+    public Vector3 animationScale = Vector3.one;
+    
+    [Tooltip("动画位置偏移")]
+    public Vector2 animationOffset = Vector2.zero;
+    
+    [Tooltip("是否适应屏幕大小")]
+    public bool fitToScreen = false;
+    
+    [Tooltip("适应屏幕时的缩放系数")]
+    [Range(0.1f, 2f)]
+    public float screenFitScale = 1f;
     
     [Header("事件")]
     public UnityEvent onTransitionStart;
@@ -114,15 +128,18 @@ public class SimpleSpineTransition : MonoBehaviour
         RectTransform rectTransform = spineGO.GetComponent<RectTransform>();
         rectTransform.anchorMin = new Vector2(0.5f, 0.5f);
         rectTransform.anchorMax = new Vector2(0.5f, 0.5f);
-        rectTransform.anchoredPosition = Vector2.zero;
-        rectTransform.localScale = Vector3.one;
+        rectTransform.anchoredPosition = animationOffset;
+        rectTransform.localScale = animationScale;
 
+        // 确保动画能播放
+        spineGraphic.timeScale = 1f;
+        
         // 获取动画名称
         string finalAnimName = animationName;
         if (string.IsNullOrEmpty(finalAnimName))
         {
             var skeletonData = transitionSpineAsset.GetSkeletonData(true);
-            if (skeletonData.Animations.Count > 0)
+            if (skeletonData != null && skeletonData.Animations.Count > 0)
             {
                 finalAnimName = skeletonData.Animations.Items[0].Name;
                 Debug.Log($"使用第一个动画: {finalAnimName}");
@@ -133,7 +150,31 @@ public class SimpleSpineTransition : MonoBehaviour
         if (!string.IsNullOrEmpty(finalAnimName))
         {
             spineGraphic.AnimationState.SetAnimation(0, finalAnimName, loopAnimation);
+            Debug.Log($"开始播放过场动画: {finalAnimName}");
         }
+        else
+        {
+            Debug.LogError("无法找到可播放的动画!");
+        }
+    }
+
+    Vector3 CalculateScreenFitScale()
+    {
+        if (transitionSpineAsset == null) return Vector3.one;
+
+        // 获取屏幕尺寸
+        Vector2 screenSize = new Vector2(Screen.width, Screen.height);
+        
+        // 获取Canvas的参考分辨率
+        CanvasScaler scaler = transitionCanvas.GetComponent<CanvasScaler>();
+        Vector2 referenceResolution = scaler.referenceResolution;
+        
+        // 计算适应比例
+        float widthScale = referenceResolution.x / 1920f;  // 基于1920基准
+        float heightScale = referenceResolution.y / 1080f; // 基于1080基准
+        
+        float scale = Mathf.Min(widthScale, heightScale);
+        return Vector3.one * scale;
     }
 
     public void LoadSceneWithTransition(string sceneName)
@@ -197,6 +238,17 @@ public class SimpleSpineTransition : MonoBehaviour
     public static void LoadScene(string sceneName)
     {
         Instance.LoadSceneWithTransition(sceneName);
+    }
+
+    public static void LoadSceneWithCustomAnimation(string sceneName, SkeletonDataAsset customAnimation, string customAnimationName = "")
+    {
+        var instance = Instance;
+        instance.transitionSpineAsset = customAnimation;
+        if (!string.IsNullOrEmpty(customAnimationName))
+        {
+            instance.animationName = customAnimationName;
+        }
+        instance.LoadSceneWithTransition(sceneName);
     }
 
     public bool IsTransitioning => isTransitioning;
