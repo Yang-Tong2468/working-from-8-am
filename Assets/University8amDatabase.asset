@@ -33,7 +33,7 @@ MonoBehaviour:
     bold: 0
     italic: 0
     underline: 0
-  baseID: 1
+  baseID: 10000
   actors:
   - id: 1
     fields:
@@ -97,7 +97,7 @@ MonoBehaviour:
       type: 0
       typeString: CustomFieldType_Text
   conversations:
-  - id: 1
+  - id: 10000
     fields:
     - title: Title
       value: 
@@ -108,11 +108,11 @@ MonoBehaviour:
       type: 0
       typeString: 
     - title: Actor
-      value: 1
+      value: 10000
       type: 5
       typeString: CustomFieldType_Actor
     - title: Conversant
-      value: 2
+      value: 10001
       type: 5
       typeString: CustomFieldType_Actor
     overrideSettings:
@@ -173,7 +173,7 @@ MonoBehaviour:
         value: None()
         type: 0
         typeString: 
-      conversationID: 1
+      conversationID: 10000
       isRoot: 1
       isGroup: 0
       nodeColor: 

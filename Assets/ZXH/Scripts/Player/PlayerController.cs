@@ -1,5 +1,4 @@
-﻿using System.Diagnostics;
-using UnityEngine;
+﻿using UnityEngine;
 
 public class PlayerController : MonoBehaviour
 {
@@ -28,6 +27,8 @@ public class PlayerController : MonoBehaviour
         float x = Input.GetAxis("Horizontal");
         float z = Input.GetAxis("Vertical"); // 在3D空间中，前后移动是Z轴
         moveDirection = new Vector3(x, 0, z).normalized;
+
+        Debug.Log($"Move Direction: {moveDirection}");
 
         if (x < 0)
         {
@@ -81,3 +82,4 @@ public class PlayerController : MonoBehaviour
     }
 
 }
+ 

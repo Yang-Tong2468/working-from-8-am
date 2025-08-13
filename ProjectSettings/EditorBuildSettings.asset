@@ -14,16 +14,16 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Campus.unity
     guid: 0acfe7d302a7f734db5e799056749dae
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/Apartment.unity
     guid: d5549a25efaac884bb02b6b5d9fd7a48
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/Gym.unity
     guid: fc9351cf7a208d242bca0773409eb9f8
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/Library.unity
     guid: da6c5ff2404c50d4aa9edcfe2d53f22a
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/Restaurant.unity
     guid: 85211cec4865ac844a35d404532cadb8
   - enabled: 1
