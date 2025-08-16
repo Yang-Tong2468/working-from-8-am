@@ -1,5 +1,4 @@
-﻿using System.Diagnostics;
-using UnityEngine;
+﻿using UnityEngine;
 
 public class PlayerController : MonoBehaviour
 {
@@ -29,6 +28,16 @@ public class PlayerController : MonoBehaviour
         float z = Input.GetAxis("Vertical"); // 在3D空间中，前后移动是Z轴
         moveDirection = new Vector3(x, 0, z).normalized;
 
+
+        if(Input.GetKeyDown("a"))
+            {
+            Debug.Log("A键被按下");
+        }
+        else if(Input.GetKeyDown("d"))
+        {
+            Debug.Log("D键被按下");
+        }
+
         if (x < 0)
         {
             spriteRenderer.flipX = true;
@@ -45,7 +54,11 @@ public class PlayerController : MonoBehaviour
 
         Vector3 finalMove = CalculateStepAndGround(targetVelocity * Time.fixedDeltaTime);
 
+        Debug.Log($"Final Move: {finalMove}");
+
         rb.MovePosition(rb.position + finalMove);
+
+        Debug.Log($"Rigidbody Position: {rb.position}");
     }
 
     /// <summary>
@@ -81,3 +94,4 @@ public class PlayerController : MonoBehaviour
     }
 
 }
+ 

@@ -33,7 +33,7 @@ MonoBehaviour:
     bold: 0
     italic: 0
     underline: 0
-  baseID: 1
+  baseID: 30000
   actors:
   - id: 1
     fields:
@@ -42,25 +42,117 @@ MonoBehaviour:
       type: 0
       typeString: CustomFieldType_Text
     - title: Pictures
-      value: '[]'
+      value: '[../../Art/Portraits/Player.png]'
       type: 3
       typeString: CustomFieldType_Files
     - title: Description
-      value: 
+      value: The Player controls a soldier sent to intercept the evil space emperor's
+        launch codes to prevent him from attacking your planet.
       type: 0
       typeString: CustomFieldType_Text
     - title: IsPlayer
       value: True
       type: 2
       typeString: CustomFieldType_Boolean
-    portrait: {fileID: 0}
+    portrait: {fileID: 2800000, guid: e63e2479a8b2dc54ea311a230ce6c979, type: 3}
     spritePortrait: {fileID: 0}
     alternatePortraits: []
     spritePortraits: []
-  - id: 2
+  - id: 30001
     fields:
     - title: Name
-      value: NPC
+      value: Private Hart
+      type: 0
+      typeString: CustomFieldType_Text
+    - title: Pictures
+      value: '[../../Art/Portraits/Private Hart.png]'
+      type: 3
+      typeString: CustomFieldType_Files
+    - title: Description
+      value: Private Hart is a kind-hearted soldier who offers the quest to hack
+        the emperor's computer to get the launch codes.
+      type: 0
+      typeString: CustomFieldType_Text
+    - title: IsPlayer
+      value: False
+      type: 2
+      typeString: CustomFieldType_Boolean
+    portrait: {fileID: 2800000, guid: e63e2479a8b2dc54ea311a230ce6c979, type: 3}
+    spritePortrait: {fileID: 0}
+    alternatePortraits: []
+    spritePortraits: []
+  - id: 30002
+    fields:
+    - title: Name
+      value: Sergeant Graves
+      type: 0
+      typeString: 
+    - title: Pictures
+      value: '[../../Art/Portraits/Sergeant Graves.png]'
+      type: 3
+      typeString: 
+    - title: Description
+      value: Sergeant Graves is a warlike soldier who offers the quest to hold back
+        enemy forces.
+      type: 0
+      typeString: 
+    - title: IsPlayer
+      value: False
+      type: 2
+      typeString: 
+    portrait: {fileID: 2800000, guid: e63e2479a8b2dc54ea311a230ce6c979, type: 3}
+    spritePortrait: {fileID: 0}
+    alternatePortraits: []
+    spritePortraits: []
+  - id: 30003
+    fields:
+    - title: Name
+      value: Terminal
+      type: 0
+      typeString: CustomFieldType_Text
+    - title: Pictures
+      value: '[]'
+      type: 3
+      typeString: CustomFieldType_Files
+    - title: Description
+      value: The Terminal is a computer interface through which the player can get
+        the launch codes.
+      type: 0
+      typeString: CustomFieldType_Text
+    - title: IsPlayer
+      value: False
+      type: 2
+      typeString: CustomFieldType_Boolean
+    portrait: {fileID: 2800000, guid: a491fca6456b0204080efb8fb6caa853, type: 3}
+    spritePortrait: {fileID: 0}
+    alternatePortraits: []
+    spritePortraits: []
+  - id: 30004
+    fields:
+    - title: Name
+      value: Dead Enemy
+      type: 0
+      typeString: 
+    - title: Pictures
+      value: '[]'
+      type: 3
+      typeString: 
+    - title: Description
+      value: The evil emperor's guards. They have a note with the terminal password.
+      type: 0
+      typeString: 
+    - title: IsPlayer
+      value: False
+      type: 2
+      typeString: 
+    portrait: {fileID: 2800000, guid: 3e54ad1935c5efc4db4454fafe3d8ae5, type: 3}
+    spritePortrait: {fileID: 0}
+    alternatePortraits: []
+    spritePortraits: []
+  - id: 30005
+    fields:
+    - title: Name
+      value: Enemy
       type: 0
       typeString: 
     - title: Pictures
@@ -68,106 +160,19 @@ MonoBehaviour:
       type: 3
       typeString: CustomFieldType_Files
     - title: Description
-      value: 
+      value: The Enemy actor is used for enemies to bark menacing one-off gameplay
+        lines that threaten the Player.
       type: 0
       typeString: 
     - title: IsPlayer
       value: False
       type: 2
       typeString: CustomFieldType_Boolean
-    portrait: {fileID: 0}
+    portrait: {fileID: 2800000, guid: 3e54ad1935c5efc4db4454fafe3d8ae5, type: 3}
     spritePortrait: {fileID: 0}
     alternatePortraits: []
     spritePortraits: []
-  - id: 3
-    fields:
-    - title: Name
-      value: Teacher
-      type: 0
-      typeString: CustomFieldType_Text
-    - title: Pictures
-      value: '[]'
-      type: 3
-      typeString: CustomFieldType_Files
-    - title: Description
-      value: 
-      type: 0
-      typeString: CustomFieldType_Text
-    - title: IsPlayer
-      value: False
-      type: 2
-      typeString: CustomFieldType_Boolean
-    portrait: {fileID: 0}
-    spritePortrait: {fileID: 0}
-    alternatePortraits: []
-    spritePortraits: []
-  - id: 4
-    fields:
-    - title: Name
-      value: Roommate
-      type: 0
-      typeString: CustomFieldType_Text
-    - title: Pictures
-      value: '[]'
-      type: 3
-      typeString: CustomFieldType_Files
-    - title: Description
-      value: 
-      type: 0
-      typeString: CustomFieldType_Text
-    - title: IsPlayer
-      value: False
-      type: 2
-      typeString: CustomFieldType_Boolean
-    portrait: {fileID: 0}
-    spritePortrait: {fileID: 0}
-    alternatePortraits: []
-    spritePortraits: []
-  - id: 5
-    fields:
-    - title: Name
-      value: Counsellor
-      type: 0
-      typeString: CustomFieldType_Text
-    - title: Pictures
-      value: '[]'
-      type: 3
-      typeString: CustomFieldType_Files
-    - title: Description
-      value: 
-      type: 0
-      typeString: CustomFieldType_Text
-    - title: IsPlayer
-      value: False
-      type: 2
-      typeString: CustomFieldType_Boolean
-    portrait: {fileID: 0}
-    spritePortrait: {fileID: 0}
-    alternatePortraits: []
-    spritePortraits: []
-  - id: 6
-    fields:
-    - title: Name
-      value: LeaderShip
-      type: 0
-      typeString: CustomFieldType_Text
-    - title: Pictures
-      value: '[]'
-      type: 3
-      typeString: CustomFieldType_Files
-    - title: Description
-      value: 
-      type: 0
-      typeString: CustomFieldType_Text
-    - title: IsPlayer
-      value: False
-      type: 2
-      typeString: CustomFieldType_Boolean
-    portrait: {fileID: 0}
-    spritePortrait: {fileID: 0}
-    alternatePortraits: []
-    spritePortraits: []
-  - id: 7
+  - id: 20006
     fields:
     - title: Name
       value: JuniorStudent
@@ -190,7 +195,7 @@ MonoBehaviour:
     alternatePortraits: []
     spritePortraits: []
   items:
-  - id: 1
+  - id: 20000
     fields:
     - title: Name
       value: "\u5076\u9047"
@@ -245,10 +250,52 @@ MonoBehaviour:
       type: 0
       typeString: CustomFieldType_Text
     - title: Description
-      value: 
+      value: Show alert messages during gameplay by setting this variable.
       type: 0
       typeString: 
-  - id: 2
+  - id: 30001
+    fields:
+    - title: Name
+      value: enemiesKilled
+      type: 0
+      typeString: 
+    - title: Initial Value
+      value: 0
+      type: 1
+      typeString: CustomFieldType_Number
+    - title: Description
+      value: Tracks the number of enemies killed.
+      type: 0
+      typeString: 
+  - id: 30002
+    fields:
+    - title: Name
+      value: hasLaunchCodes
+      type: 0
+      typeString: 
+    - title: Initial Value
+      value: False
+      type: 2
+      typeString: CustomFieldType_Boolean
+    - title: Description
+      value: Tracks whether the player has found the launch codes.
+      type: 0
+      typeString: 
+  - id: 30003
+    fields:
+    - title: Name
+      value: password
+      type: 0
+      typeString: 
+    - title: Initial Value
+      value: 
+      type: 0
+      typeString: CustomFieldType_Text
+    - title: Description
+      value: Holds player's input from Terminal conversation's TextInput() command.
+      type: 0
+      typeString: 
+  - id: 20001
     fields:
     - title: Name
       value: isNabuhaniAlive
@@ -262,35 +309,7 @@ MonoBehaviour:
       value: 
       type: 0
       typeString: 
-  - id: 3
-    fields:
-    - title: Name
-      value: hasTriggeredFlowerProtector
-      type: 0
-      typeString: 
-    - title: Initial Value
-      value: False
-      type: 2
-      typeString: CustomFieldType_Boolean
-    - title: Description
-      value: 
-      type: 0
-      typeString: 
-  - id: 4
-    fields:
-    - title: Name
-      value: isNabhaniSupporter
-      type: 0
-      typeString: 
-    - title: Initial Value
-      value: False
-      type: 2
-      typeString: CustomFieldType_Boolean
-    - title: Description
-      value: 
-      type: 0
-      typeString: 
-  - id: 5
+  - id: 20004
     fields:
     - title: Name
       value: isNabuhaniInHand
@@ -304,7 +323,7 @@ MonoBehaviour:
       value: 
       type: 0
       typeString: 
-  - id: 6
+  - id: 20005
     fields:
     - title: Name
       value: is
@@ -318,7 +337,7 @@ MonoBehaviour:
       value: 
       type: 0
       typeString: 
-  - id: 7
+  - id: 20006
     fields:
     - title: Name
       value: isKnowingWithJuniorStudent
@@ -332,7 +351,7 @@ MonoBehaviour:
       value: "\u4E0E\u5B66\u59B9\u662F\u5426\u76F8\u8BC6"
       type: 0
       typeString: 
-  - id: 8
+  - id: 20007
     fields:
     - title: Name
       value: isFirstVisitLibrary
@@ -347,7 +366,7 @@ MonoBehaviour:
       type: 0
       typeString: 
   conversations:
-  - id: 1
+  - id: 30000
     fields:
     - title: Title
       value: New Conversation 1
@@ -358,11 +377,11 @@ MonoBehaviour:
       type: 0
       typeString: 
     - title: Actor
-      value: 1
+      value: 10000
       type: 5
       typeString: CustomFieldType_Actor
     - title: Conversant
-      value: 2
+      value: 10001
       type: 5
       typeString: CustomFieldType_Actor
     overrideSettings:
@@ -404,11 +423,11 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Actor
-        value: 1
+        value: 10000
         type: 5
         typeString: CustomFieldType_Actor
       - title: Conversant
-        value: 2
+        value: 10001
         type: 5
         typeString: CustomFieldType_Actor
       - title: Menu Text
@@ -423,7 +442,7 @@ MonoBehaviour:
         value: None()
         type: 0
         typeString: 
-      conversationID: 1
+      conversationID: 30000
       isRoot: 1
       isGroup: 0
       nodeColor: 
@@ -431,9 +450,9 @@ MonoBehaviour:
       falseConditionAction: Block
       conditionPriority: 2
       outgoingLinks:
-      - originConversationID: 1
+      - originConversationID: 30000
         originDialogueID: 0
-        destinationConversationID: 1
+        destinationConversationID: 30000
         destinationDialogueID: 1
         isConnector: 0
         priority: 2
@@ -459,11 +478,11 @@ MonoBehaviour:
         type: 0
         typeString: CustomFieldType_Text
       - title: Actor
-        value: 2
+        value: 10001
         type: 5
         typeString: CustomFieldType_Actor
       - title: Conversant
-        value: 1
+        value: 10000
         type: 5
         typeString: CustomFieldType_Actor
       - title: Menu Text
@@ -478,7 +497,7 @@ MonoBehaviour:
         value: 
         type: 0
         typeString: CustomFieldType_Text
-      conversationID: 1
+      conversationID: 30000
       isRoot: 0
       isGroup: 0
       nodeColor: 
@@ -486,21 +505,21 @@ MonoBehaviour:
       falseConditionAction: Block
       conditionPriority: 2
       outgoingLinks:
-      - originConversationID: 1
+      - originConversationID: 30000
         originDialogueID: 1
-        destinationConversationID: 1
+        destinationConversationID: 30000
         destinationDialogueID: 2
         isConnector: 0
         priority: 2
-      - originConversationID: 1
+      - originConversationID: 30000
         originDialogueID: 1
-        destinationConversationID: 1
+        destinationConversationID: 30000
         destinationDialogueID: 3
         isConnector: 0
         priority: 2
-      - originConversationID: 1
+      - originConversationID: 30000
         originDialogueID: 1
-        destinationConversationID: 1
+        destinationConversationID: 30000
         destinationDialogueID: 4
         isConnector: 0
         priority: 2
@@ -526,7 +545,7 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Actor
-        value: 1
+        value: 10000
         type: 5
         typeString: CustomFieldType_Actor
       - title: Conversant
@@ -545,7 +564,7 @@ MonoBehaviour:
         value: 
         type: 0
         typeString: 
-      conversationID: 1
+      conversationID: 30000
       isRoot: 0
       isGroup: 0
       nodeColor: 
@@ -553,14 +572,14 @@ MonoBehaviour:
       falseConditionAction: Block
       conditionPriority: 2
       outgoingLinks:
-      - originConversationID: 1
+      - originConversationID: 30000
         originDialogueID: 2
-        destinationConversationID: 1
+        destinationConversationID: 30000
         destinationDialogueID: 5
         isConnector: 0
         priority: 2
       conditionsString: 
-      userScript: Variable["isNabhaniSupporter"] = true
+      userScript: Variable["password"] = true
       onExecute:
         m_PersistentCalls:
           m_Calls: []
@@ -581,7 +600,7 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Actor
-        value: 1
+        value: 10000
         type: 5
         typeString: CustomFieldType_Actor
       - title: Conversant
@@ -600,7 +619,7 @@ MonoBehaviour:
         value: 
         type: 0
         typeString: 
-      conversationID: 1
+      conversationID: 30000
       isRoot: 0
       isGroup: 0
       nodeColor: 
@@ -608,14 +627,14 @@ MonoBehaviour:
       falseConditionAction: Block
       conditionPriority: 2
       outgoingLinks:
-      - originConversationID: 1
+      - originConversationID: 30000
         originDialogueID: 3
-        destinationConversationID: 1
+        destinationConversationID: 30000
         destinationDialogueID: 5
         isConnector: 0
         priority: 2
       conditionsString: 
-      userScript: Variable["isNabhaniSupporter"] = true
+      userScript: Variable["password"] = true
       onExecute:
         m_PersistentCalls:
           m_Calls: []
@@ -636,7 +655,7 @@ MonoBehaviour:
         type: 0
         typeString: CustomFieldType_Text
       - title: Actor
-        value: 1
+        value: 10000
         type: 5
         typeString: CustomFieldType_Actor
       - title: Conversant
@@ -655,7 +674,7 @@ MonoBehaviour:
         value: 
         type: 0
         typeString: CustomFieldType_Text
-      conversationID: 1
+      conversationID: 30000
       isRoot: 0
       isGroup: 0
       nodeColor: 
@@ -685,7 +704,7 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Actor
-        value: 2
+        value: 10001
         type: 5
         typeString: CustomFieldType_Actor
       - title: Conversant
@@ -704,7 +723,7 @@ MonoBehaviour:
         value: 
         type: 0
         typeString: 
-      conversationID: 1
+      conversationID: 30000
       isRoot: 0
       isGroup: 0
       nodeColor: 
@@ -712,15 +731,15 @@ MonoBehaviour:
       falseConditionAction: Block
       conditionPriority: 2
       outgoingLinks:
-      - originConversationID: 1
+      - originConversationID: 30000
         originDialogueID: 5
-        destinationConversationID: 1
+        destinationConversationID: 30000
         destinationDialogueID: 6
         isConnector: 0
         priority: 2
-      - originConversationID: 1
+      - originConversationID: 30000
         originDialogueID: 5
-        destinationConversationID: 1
+        destinationConversationID: 30000
         destinationDialogueID: 7
         isConnector: 0
         priority: 2
@@ -746,11 +765,11 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Actor
-        value: 1
+        value: 10000
         type: 5
         typeString: CustomFieldType_Actor
       - title: Conversant
-        value: 1
+        value: 10000
         type: 5
         typeString: CustomFieldType_Actor
       - title: Menu Text
@@ -765,7 +784,7 @@ MonoBehaviour:
         value: 
         type: 0
         typeString: 
-      conversationID: 1
+      conversationID: 30000
       isRoot: 0
       isGroup: 0
       nodeColor: 
@@ -795,11 +814,11 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Actor
-        value: 2
+        value: 10001
         type: 5
         typeString: CustomFieldType_Actor
       - title: Conversant
-        value: 2
+        value: 10001
         type: 5
         typeString: CustomFieldType_Actor
       - title: Menu Text
@@ -814,7 +833,7 @@ MonoBehaviour:
         value: 
         type: 0
         typeString: 
-      conversationID: 1
+      conversationID: 30000
       isRoot: 0
       isGroup: 0
       nodeColor: 
@@ -836,7 +855,7 @@ MonoBehaviour:
     entryGroups: []
     canvasScrollPosition: {x: 74.17584, y: 0}
     canvasZoom: 0.9100001
-  - id: 2
+  - id: 30001
     fields:
     - title: Title
       value: "\u4E0A\u8BFE"
@@ -847,11 +866,11 @@ MonoBehaviour:
       type: 0
       typeString: 
     - title: Actor
-      value: 2
+      value: 10001
       type: 5
       typeString: CustomFieldType_Actor
     - title: Conversant
-      value: 1
+      value: 10000
       type: 5
       typeString: CustomFieldType_Actor
     overrideSettings:
@@ -893,11 +912,11 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Actor
-        value: 2
+        value: 10001
         type: 5
         typeString: CustomFieldType_Actor
       - title: Conversant
-        value: 2
+        value: 10001
         type: 5
         typeString: CustomFieldType_Actor
       - title: Menu Text
@@ -912,7 +931,7 @@ MonoBehaviour:
         value: None()
         type: 0
         typeString: 
-      conversationID: 2
+      conversationID: 30001
       isRoot: 1
       isGroup: 0
       nodeColor: 
@@ -920,9 +939,9 @@ MonoBehaviour:
       falseConditionAction: Block
       conditionPriority: 2
       outgoingLinks:
-      - originConversationID: 2
+      - originConversationID: 30001
         originDialogueID: 0
-        destinationConversationID: 2
+        destinationConversationID: 30001
         destinationDialogueID: 1
         isConnector: 0
         priority: 2
@@ -948,11 +967,11 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Actor
-        value: 2
+        value: 10001
         type: 5
         typeString: CustomFieldType_Actor
       - title: Conversant
-        value: 1
+        value: 10000
         type: 5
         typeString: CustomFieldType_Actor
       - title: Menu Text
@@ -967,7 +986,7 @@ MonoBehaviour:
         value: 
         type: 0
         typeString: 
-      conversationID: 2
+      conversationID: 30001
       isRoot: 0
       isGroup: 0
       nodeColor: 
@@ -975,15 +994,15 @@ MonoBehaviour:
       falseConditionAction: Block
       conditionPriority: 2
       outgoingLinks:
-      - originConversationID: 2
+      - originConversationID: 30001
         originDialogueID: 1
-        destinationConversationID: 2
+        destinationConversationID: 30001
         destinationDialogueID: 2
         isConnector: 0
         priority: 2
-      - originConversationID: 2
+      - originConversationID: 30001
         originDialogueID: 1
-        destinationConversationID: 2
+        destinationConversationID: 30001
         destinationDialogueID: 3
         isConnector: 0
         priority: 2
@@ -1009,11 +1028,11 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Actor
-        value: 1
+        value: 10000
         type: 5
         typeString: CustomFieldType_Actor
       - title: Conversant
-        value: 2
+        value: 10001
         type: 5
         typeString: CustomFieldType_Actor
       - title: Menu Text
@@ -1028,7 +1047,7 @@ MonoBehaviour:
         value: 
         type: 0
         typeString: 
-      conversationID: 2
+      conversationID: 30001
       isRoot: 0
       isGroup: 0
       nodeColor: 
@@ -1036,15 +1055,15 @@ MonoBehaviour:
       falseConditionAction: Block
       conditionPriority: 2
       outgoingLinks:
-      - originConversationID: 2
+      - originConversationID: 30001
         originDialogueID: 2
-        destinationConversationID: 2
+        destinationConversationID: 30001
         destinationDialogueID: 4
         isConnector: 0
         priority: 2
-      - originConversationID: 2
+      - originConversationID: 30001
         originDialogueID: 2
-        destinationConversationID: 2
+        destinationConversationID: 30001
         destinationDialogueID: 5
         isConnector: 0
         priority: 2
@@ -1070,11 +1089,11 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Actor
-        value: 1
+        value: 10000
         type: 5
         typeString: CustomFieldType_Actor
       - title: Conversant
-        value: 2
+        value: 10001
         type: 5
         typeString: CustomFieldType_Actor
       - title: Menu Text
@@ -1089,7 +1108,7 @@ MonoBehaviour:
         value: 
         type: 0
         typeString: 
-      conversationID: 2
+      conversationID: 30001
       isRoot: 0
       isGroup: 0
       nodeColor: 
@@ -1119,11 +1138,11 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Actor
-        value: 4
+        value: 20003
         type: 5
         typeString: CustomFieldType_Actor
       - title: Conversant
-        value: 1
+        value: 10000
         type: 5
         typeString: CustomFieldType_Actor
       - title: Menu Text
@@ -1138,7 +1157,7 @@ MonoBehaviour:
         value: 
         type: 0
         typeString: 
-      conversationID: 2
+      conversationID: 30001
       isRoot: 0
       isGroup: 0
       nodeColor: 
@@ -1168,11 +1187,11 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Actor
-        value: 2
+        value: 10001
         type: 5
         typeString: CustomFieldType_Actor
       - title: Conversant
-        value: 1
+        value: 10000
         type: 5
         typeString: CustomFieldType_Actor
       - title: Menu Text
@@ -1187,7 +1206,7 @@ MonoBehaviour:
         value: 
         type: 0
         typeString: 
-      conversationID: 2
+      conversationID: 30001
       isRoot: 0
       isGroup: 0
       nodeColor: 
@@ -1209,7 +1228,7 @@ MonoBehaviour:
     entryGroups: []
     canvasScrollPosition: {x: 0, y: 0}
     canvasZoom: 0.8800001
-  - id: 3
+  - id: 30002
     fields:
     - title: Title
       value: "\u5403\u996D"
@@ -1220,11 +1239,11 @@ MonoBehaviour:
       type: 0
       typeString: 
     - title: Actor
-      value: 1
+      value: 10000
       type: 5
       typeString: CustomFieldType_Actor
     - title: Conversant
-      value: 4
+      value: 20003
       type: 5
       typeString: CustomFieldType_Actor
     overrideSettings:
@@ -1266,11 +1285,11 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Actor
-        value: 1
+        value: 10000
         type: 5
         typeString: CustomFieldType_Actor
       - title: Conversant
-        value: 4
+        value: 20003
         type: 5
         typeString: CustomFieldType_Actor
       - title: Menu Text
@@ -1285,7 +1304,7 @@ MonoBehaviour:
         value: None()
         type: 0
         typeString: 
-      conversationID: 3
+      conversationID: 30002
       isRoot: 1
       isGroup: 0
       nodeColor: 
@@ -1293,9 +1312,9 @@ MonoBehaviour:
       falseConditionAction: Block
       conditionPriority: 2
       outgoingLinks:
-      - originConversationID: 3
+      - originConversationID: 30002
         originDialogueID: 0
-        destinationConversationID: 3
+        destinationConversationID: 30002
         destinationDialogueID: 1
         isConnector: 0
         priority: 2
@@ -1321,11 +1340,11 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Actor
-        value: 1
+        value: 10000
         type: 5
         typeString: CustomFieldType_Actor
       - title: Conversant
-        value: 4
+        value: 20003
         type: 5
         typeString: CustomFieldType_Actor
       - title: Menu Text
@@ -1340,7 +1359,7 @@ MonoBehaviour:
         value: 
         type: 0
         typeString: 
-      conversationID: 3
+      conversationID: 30002
       isRoot: 0
       isGroup: 0
       nodeColor: 
@@ -1348,21 +1367,21 @@ MonoBehaviour:
       falseConditionAction: Block
       conditionPriority: 2
       outgoingLinks:
-      - originConversationID: 3
+      - originConversationID: 30002
         originDialogueID: 1
-        destinationConversationID: 3
+        destinationConversationID: 30002
         destinationDialogueID: 2
         isConnector: 0
         priority: 2
-      - originConversationID: 3
+      - originConversationID: 30002
         originDialogueID: 1
-        destinationConversationID: 3
+        destinationConversationID: 30002
         destinationDialogueID: 3
         isConnector: 0
         priority: 2
-      - originConversationID: 3
+      - originConversationID: 30002
         originDialogueID: 1
-        destinationConversationID: 3
+        destinationConversationID: 30002
         destinationDialogueID: 4
         isConnector: 0
         priority: 2
@@ -1388,11 +1407,11 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Actor
-        value: 1
+        value: 10000
         type: 5
         typeString: CustomFieldType_Actor
       - title: Conversant
-        value: 4
+        value: 20003
         type: 5
         typeString: CustomFieldType_Actor
       - title: Menu Text
@@ -1407,7 +1426,7 @@ MonoBehaviour:
         value: 
         type: 0
         typeString: 
-      conversationID: 3
+      conversationID: 30002
       isRoot: 0
       isGroup: 0
       nodeColor: 
@@ -1437,11 +1456,11 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Actor
-        value: 1
+        value: 10000
         type: 5
         typeString: CustomFieldType_Actor
       - title: Conversant
-        value: 4
+        value: 20003
         type: 5
         typeString: CustomFieldType_Actor
       - title: Menu Text
@@ -1456,7 +1475,7 @@ MonoBehaviour:
         value: 
         type: 0
         typeString: 
-      conversationID: 3
+      conversationID: 30002
       isRoot: 0
       isGroup: 0
       nodeColor: 
@@ -1486,11 +1505,11 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Actor
-        value: 1
+        value: 10000
         type: 5
         typeString: CustomFieldType_Actor
       - title: Conversant
-        value: 4
+        value: 20003
         type: 5
         typeString: CustomFieldType_Actor
       - title: Menu Text
@@ -1505,7 +1524,7 @@ MonoBehaviour:
         value: 
         type: 0
         typeString: 
-      conversationID: 3
+      conversationID: 30002
       isRoot: 0
       isGroup: 0
       nodeColor: 
@@ -1527,7 +1546,7 @@ MonoBehaviour:
     entryGroups: []
     canvasScrollPosition: {x: 0, y: 0}
     canvasZoom: 0.85000014
-  - id: 4
+  - id: 30003
     fields:
     - title: Title
       value: "\u6E38\u620F"
@@ -1538,11 +1557,11 @@ MonoBehaviour:
       type: 0
       typeString: 
     - title: Actor
-      value: 1
+      value: 10000
       type: 5
       typeString: CustomFieldType_Actor
     - title: Conversant
-      value: 1
+      value: 10000
       type: 5
       typeString: CustomFieldType_Actor
     overrideSettings:
@@ -1584,11 +1603,11 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Actor
-        value: 1
+        value: 10000
         type: 5
         typeString: CustomFieldType_Actor
       - title: Conversant
-        value: 1
+        value: 10000
         type: 5
         typeString: CustomFieldType_Actor
       - title: Menu Text
@@ -1603,7 +1622,7 @@ MonoBehaviour:
         value: None()
         type: 0
         typeString: 
-      conversationID: 4
+      conversationID: 30003
       isRoot: 1
       isGroup: 0
       nodeColor: 
@@ -1625,7 +1644,7 @@ MonoBehaviour:
     entryGroups: []
     canvasScrollPosition: {x: 0, y: 0}
     canvasZoom: 1
-  - id: 5
+  - id: 30004
     fields:
     - title: Title
       value: "\u56DE\u7B54\u95EE\u9898"
@@ -1636,11 +1655,11 @@ MonoBehaviour:
       type: 0
       typeString: 
     - title: Actor
-      value: 2
+      value: 10001
       type: 5
       typeString: CustomFieldType_Actor
     - title: Conversant
-      value: 1
+      value: 10000
       type: 5
       typeString: CustomFieldType_Actor
     overrideSettings:
@@ -1682,11 +1701,11 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Actor
-        value: 2
+        value: 10001
         type: 5
         typeString: CustomFieldType_Actor
       - title: Conversant
-        value: 2
+        value: 10000
         type: 5
         typeString: CustomFieldType_Actor
       - title: Menu Text
@@ -1701,7 +1720,7 @@ MonoBehaviour:
         value: None()
         type: 0
         typeString: 
-      conversationID: 5
+      conversationID: 30004
       isRoot: 1
       isGroup: 0
       nodeColor: 
@@ -1709,9 +1728,9 @@ MonoBehaviour:
       falseConditionAction: Block
       conditionPriority: 2
       outgoingLinks:
-      - originConversationID: 5
+      - originConversationID: 30004
         originDialogueID: 0
-        destinationConversationID: 5
+        destinationConversationID: 30004
         destinationDialogueID: 1
         isConnector: 0
         priority: 2
@@ -1722,7 +1741,7 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 611.6026
+        x: 613.43744
         y: 22.32042
         width: 160
         height: 30
@@ -1737,11 +1756,11 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Actor
-        value: 2
+        value: 10001
         type: 5
         typeString: CustomFieldType_Actor
       - title: Conversant
-        value: 2
+        value: 10000
         type: 5
         typeString: CustomFieldType_Actor
       - title: Menu Text
@@ -1756,7 +1775,7 @@ MonoBehaviour:
         value: 
         type: 0
         typeString: 
-      conversationID: 5
+      conversationID: 30004
       isRoot: 0
       isGroup: 0
       nodeColor: 
@@ -1764,15 +1783,15 @@ MonoBehaviour:
       falseConditionAction: Block
       conditionPriority: 2
       outgoingLinks:
-      - originConversationID: 5
+      - originConversationID: 30004
         originDialogueID: 1
-        destinationConversationID: 5
+        destinationConversationID: 30004
         destinationDialogueID: 2
         isConnector: 0
         priority: 2
-      - originConversationID: 5
+      - originConversationID: 30004
         originDialogueID: 1
-        destinationConversationID: 5
+        destinationConversationID: 30004
         destinationDialogueID: 3
         isConnector: 0
         priority: 2
@@ -1783,7 +1802,7 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 614.75635
+        x: 614.2976
         y: 80.404144
         width: 160
         height: 30
@@ -1798,11 +1817,11 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Actor
-        value: 1
+        value: 10000
         type: 5
         typeString: CustomFieldType_Actor
       - title: Conversant
-        value: 2
+        value: 10001
         type: 5
         typeString: CustomFieldType_Actor
       - title: Menu Text
@@ -1817,7 +1836,7 @@ MonoBehaviour:
         value: 
         type: 0
         typeString: 
-      conversationID: 5
+      conversationID: 30004
       isRoot: 0
       isGroup: 0
       nodeColor: 
@@ -1847,11 +1866,11 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Actor
-        value: 1
+        value: 10000
         type: 5
         typeString: CustomFieldType_Actor
       - title: Conversant
-        value: 2
+        value: 10001
         type: 5
         typeString: CustomFieldType_Actor
       - title: Menu Text
@@ -1866,7 +1885,7 @@ MonoBehaviour:
         value: 
         type: 0
         typeString: 
-      conversationID: 5
+      conversationID: 30004
       isRoot: 0
       isGroup: 0
       nodeColor: 
@@ -1886,9 +1905,9 @@ MonoBehaviour:
         width: 160
         height: 30
     entryGroups: []
-    canvasScrollPosition: {x: 111.97221, y: 0}
-    canvasZoom: 0.7000004
-  - id: 6
+    canvasScrollPosition: {x: 335.0907, y: 0}
+    canvasZoom: 1.09
+  - id: 30005
     fields:
     - title: Title
       value: "\u997F\u5F97\u53D7\u4E0D\u4E86"
@@ -1899,11 +1918,11 @@ MonoBehaviour:
       type: 0
       typeString: 
     - title: Actor
-      value: 1
+      value: 10000
       type: 5
       typeString: CustomFieldType_Actor
     - title: Conversant
-      value: 4
+      value: 20003
       type: 5
       typeString: CustomFieldType_Actor
     overrideSettings:
@@ -1945,11 +1964,11 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Actor
-        value: 1
+        value: 10000
         type: 5
         typeString: CustomFieldType_Actor
       - title: Conversant
-        value: 4
+        value: 20003
         type: 5
         typeString: CustomFieldType_Actor
       - title: Menu Text
@@ -1964,7 +1983,7 @@ MonoBehaviour:
         value: None()
         type: 0
         typeString: 
-      conversationID: 6
+      conversationID: 30005
       isRoot: 1
       isGroup: 0
       nodeColor: 
@@ -1972,9 +1991,9 @@ MonoBehaviour:
       falseConditionAction: Block
       conditionPriority: 2
       outgoingLinks:
-      - originConversationID: 6
+      - originConversationID: 30005
         originDialogueID: 0
-        destinationConversationID: 6
+        destinationConversationID: 30005
         destinationDialogueID: 1
         isConnector: 0
         priority: 2
@@ -2000,11 +2019,11 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Actor
-        value: 1
+        value: 10000
         type: 5
         typeString: CustomFieldType_Actor
       - title: Conversant
-        value: 4
+        value: 20003
         type: 5
         typeString: CustomFieldType_Actor
       - title: Menu Text
@@ -2019,7 +2038,7 @@ MonoBehaviour:
         value: 
         type: 0
         typeString: 
-      conversationID: 6
+      conversationID: 30005
       isRoot: 0
       isGroup: 0
       nodeColor: 
@@ -2027,15 +2046,15 @@ MonoBehaviour:
       falseConditionAction: Block
       conditionPriority: 2
       outgoingLinks:
-      - originConversationID: 6
+      - originConversationID: 30005
         originDialogueID: 1
-        destinationConversationID: 6
+        destinationConversationID: 30005
         destinationDialogueID: 2
         isConnector: 0
         priority: 2
-      - originConversationID: 6
+      - originConversationID: 30005
         originDialogueID: 1
-        destinationConversationID: 6
+        destinationConversationID: 30005
         destinationDialogueID: 3
         isConnector: 0
         priority: 2
@@ -2061,11 +2080,11 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Actor
-        value: 1
+        value: 10000
         type: 5
         typeString: CustomFieldType_Actor
       - title: Conversant
-        value: 4
+        value: 20003
         type: 5
         typeString: CustomFieldType_Actor
       - title: Menu Text
@@ -2080,7 +2099,7 @@ MonoBehaviour:
         value: 
         type: 0
         typeString: 
-      conversationID: 6
+      conversationID: 30005
       isRoot: 0
       isGroup: 0
       nodeColor: 
@@ -2088,9 +2107,9 @@ MonoBehaviour:
       falseConditionAction: Block
       conditionPriority: 2
       outgoingLinks:
-      - originConversationID: 6
+      - originConversationID: 30005
         originDialogueID: 2
-        destinationConversationID: 6
+        destinationConversationID: 30005
         destinationDialogueID: 4
         isConnector: 0
         priority: 2
@@ -2116,11 +2135,11 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Actor
-        value: 1
+        value: 10000
         type: 5
         typeString: CustomFieldType_Actor
       - title: Conversant
-        value: 4
+        value: 20003
         type: 5
         typeString: CustomFieldType_Actor
       - title: Menu Text
@@ -2135,7 +2154,7 @@ MonoBehaviour:
         value: 
         type: 0
         typeString: 
-      conversationID: 6
+      conversationID: 30005
       isRoot: 0
       isGroup: 0
       nodeColor: 
@@ -2143,9 +2162,9 @@ MonoBehaviour:
       falseConditionAction: Block
       conditionPriority: 2
       outgoingLinks:
-      - originConversationID: 6
+      - originConversationID: 30005
         originDialogueID: 3
-        destinationConversationID: 6
+        destinationConversationID: 30005
         destinationDialogueID: 8
         isConnector: 0
         priority: 2
@@ -2171,11 +2190,11 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Actor
-        value: 4
+        value: 20003
         type: 5
         typeString: CustomFieldType_Actor
       - title: Conversant
-        value: 1
+        value: 10000
         type: 5
         typeString: CustomFieldType_Actor
       - title: Menu Text
@@ -2190,7 +2209,7 @@ MonoBehaviour:
         value: 
         type: 0
         typeString: 
-      conversationID: 6
+      conversationID: 30005
       isRoot: 0
       isGroup: 0
       nodeColor: 
@@ -2198,9 +2217,9 @@ MonoBehaviour:
       falseConditionAction: Block
       conditionPriority: 2
       outgoingLinks:
-      - originConversationID: 6
+      - originConversationID: 30005
         originDialogueID: 4
-        destinationConversationID: 6
+        destinationConversationID: 30005
         destinationDialogueID: 5
         isConnector: 0
         priority: 2
@@ -2226,11 +2245,11 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Actor
-        value: 1
+        value: 10000
         type: 5
         typeString: CustomFieldType_Actor
       - title: Conversant
-        value: 4
+        value: 20003
         type: 5
         typeString: CustomFieldType_Actor
       - title: Menu Text
@@ -2245,7 +2264,7 @@ MonoBehaviour:
         value: 
         type: 0
         typeString: 
-      conversationID: 6
+      conversationID: 30005
       isRoot: 0
       isGroup: 0
       nodeColor: 
@@ -2253,9 +2272,9 @@ MonoBehaviour:
       falseConditionAction: Block
       conditionPriority: 2
       outgoingLinks:
-      - originConversationID: 6
+      - originConversationID: 30005
         originDialogueID: 5
-        destinationConversationID: 6
+        destinationConversationID: 30005
         destinationDialogueID: 6
         isConnector: 0
         priority: 2
@@ -2281,11 +2300,11 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Actor
-        value: 4
+        value: 20003
         type: 5
         typeString: CustomFieldType_Actor
       - title: Conversant
-        value: 1
+        value: 10000
         type: 5
         typeString: CustomFieldType_Actor
       - title: Menu Text
@@ -2300,7 +2319,7 @@ MonoBehaviour:
         value: 
         type: 0
         typeString: 
-      conversationID: 6
+      conversationID: 30005
       isRoot: 0
       isGroup: 0
       nodeColor: 
@@ -2308,9 +2327,9 @@ MonoBehaviour:
       falseConditionAction: Block
       conditionPriority: 2
       outgoingLinks:
-      - originConversationID: 6
+      - originConversationID: 30005
         originDialogueID: 6
-        destinationConversationID: 6
+        destinationConversationID: 30005
         destinationDialogueID: 7
         isConnector: 0
         priority: 2
@@ -2336,11 +2355,11 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Actor
-        value: 1
+        value: 10000
         type: 5
         typeString: CustomFieldType_Actor
       - title: Conversant
-        value: 4
+        value: 20003
         type: 5
         typeString: CustomFieldType_Actor
       - title: Menu Text
@@ -2355,7 +2374,7 @@ MonoBehaviour:
         value: 
         type: 0
         typeString: 
-      conversationID: 6
+      conversationID: 30005
       isRoot: 0
       isGroup: 0
       nodeColor: 
@@ -2385,11 +2404,11 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Actor
-        value: 7
+        value: 20006
         type: 5
         typeString: CustomFieldType_Actor
       - title: Conversant
-        value: 1
+        value: 10000
         type: 5
         typeString: CustomFieldType_Actor
       - title: Menu Text
@@ -2404,7 +2423,7 @@ MonoBehaviour:
         value: 
         type: 0
         typeString: 
-      conversationID: 6
+      conversationID: 30005
       isRoot: 0
       isGroup: 0
       nodeColor: 
@@ -2426,7 +2445,7 @@ MonoBehaviour:
     entryGroups: []
     canvasScrollPosition: {x: 122.52753, y: 1.0989075}
     canvasZoom: 0.9100001
-  - id: 7
+  - id: 30006
     fields:
     - title: Title
       value: "\u5076\u9047"
@@ -2437,11 +2456,11 @@ MonoBehaviour:
       type: 0
       typeString: 
     - title: Actor
-      value: 1
+      value: 10000
       type: 5
       typeString: CustomFieldType_Actor
     - title: Conversant
-      value: 7
+      value: 20006
       type: 5
       typeString: CustomFieldType_Actor
     overrideSettings:
@@ -2483,11 +2502,11 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Actor
-        value: 1
+        value: 10000
         type: 5
         typeString: CustomFieldType_Actor
       - title: Conversant
-        value: 7
+        value: 20006
         type: 5
         typeString: CustomFieldType_Actor
       - title: Menu Text
@@ -2502,7 +2521,7 @@ MonoBehaviour:
         value: None()
         type: 0
         typeString: 
-      conversationID: 7
+      conversationID: 30006
       isRoot: 1
       isGroup: 0
       nodeColor: 
@@ -2510,27 +2529,27 @@ MonoBehaviour:
       falseConditionAction: Block
       conditionPriority: 2
       outgoingLinks:
-      - originConversationID: 7
+      - originConversationID: 30006
         originDialogueID: 0
-        destinationConversationID: 7
+        destinationConversationID: 30006
         destinationDialogueID: 1
         isConnector: 0
         priority: 0
-      - originConversationID: 7
+      - originConversationID: 30006
         originDialogueID: 0
-        destinationConversationID: 7
+        destinationConversationID: 30006
         destinationDialogueID: 14
         isConnector: 0
         priority: 2
-      - originConversationID: 7
+      - originConversationID: 30006
         originDialogueID: 0
-        destinationConversationID: 7
+        destinationConversationID: 30006
         destinationDialogueID: 5
         isConnector: 0
         priority: 2
-      - originConversationID: 7
+      - originConversationID: 30006
         originDialogueID: 0
-        destinationConversationID: 7
+        destinationConversationID: 30006
         destinationDialogueID: 15
         isConnector: 0
         priority: 2
@@ -2556,11 +2575,11 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Actor
-        value: 7
+        value: 20006
         type: 5
         typeString: CustomFieldType_Actor
       - title: Conversant
-        value: 1
+        value: 10000
         type: 5
         typeString: CustomFieldType_Actor
       - title: Menu Text
@@ -2575,7 +2594,7 @@ MonoBehaviour:
         value: 
         type: 0
         typeString: 
-      conversationID: 7
+      conversationID: 30006
       isRoot: 0
       isGroup: 0
       nodeColor: 
@@ -2583,9 +2602,9 @@ MonoBehaviour:
       falseConditionAction: Block
       conditionPriority: 2
       outgoingLinks:
-      - originConversationID: 7
+      - originConversationID: 30006
         originDialogueID: 1
-        destinationConversationID: 7
+        destinationConversationID: 30006
         destinationDialogueID: 2
         isConnector: 0
         priority: 2
@@ -2611,11 +2630,11 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Actor
-        value: 1
+        value: 10000
         type: 5
         typeString: CustomFieldType_Actor
       - title: Conversant
-        value: 7
+        value: 20006
         type: 5
         typeString: CustomFieldType_Actor
       - title: Menu Text
@@ -2630,7 +2649,7 @@ MonoBehaviour:
         value: 
         type: 0
         typeString: 
-      conversationID: 7
+      conversationID: 30006
       isRoot: 0
       isGroup: 0
       nodeColor: 
@@ -2638,9 +2657,9 @@ MonoBehaviour:
       falseConditionAction: Block
       conditionPriority: 2
       outgoingLinks:
-      - originConversationID: 7
+      - originConversationID: 30006
         originDialogueID: 2
-        destinationConversationID: 7
+        destinationConversationID: 30006
         destinationDialogueID: 3
         isConnector: 0
         priority: 2
@@ -2666,11 +2685,11 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Actor
-        value: 7
+        value: 20006
         type: 5
         typeString: CustomFieldType_Actor
       - title: Conversant
-        value: 1
+        value: 10000
         type: 5
         typeString: CustomFieldType_Actor
       - title: Menu Text
@@ -2685,7 +2704,7 @@ MonoBehaviour:
         value: 
         type: 0
         typeString: 
-      conversationID: 7
+      conversationID: 30006
       isRoot: 0
       isGroup: 0
       nodeColor: 
@@ -2693,15 +2712,15 @@ MonoBehaviour:
       falseConditionAction: Block
       conditionPriority: 2
       outgoingLinks:
-      - originConversationID: 7
+      - originConversationID: 30006
         originDialogueID: 3
-        destinationConversationID: 7
+        destinationConversationID: 30006
         destinationDialogueID: 4
         isConnector: 0
         priority: 2
-      - originConversationID: 7
+      - originConversationID: 30006
         originDialogueID: 3
-        destinationConversationID: 7
+        destinationConversationID: 30006
         destinationDialogueID: 13
         isConnector: 0
         priority: 2
@@ -2727,11 +2746,11 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Actor
-        value: 1
+        value: 10000
         type: 5
         typeString: CustomFieldType_Actor
       - title: Conversant
-        value: 7
+        value: 20006
         type: 5
         typeString: CustomFieldType_Actor
       - title: Menu Text
@@ -2746,7 +2765,7 @@ MonoBehaviour:
         value: 
         type: 0
         typeString: 
-      conversationID: 7
+      conversationID: 30006
       isRoot: 0
       isGroup: 0
       nodeColor: 
@@ -2776,11 +2795,11 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Actor
-        value: 7
+        value: 20006
         type: 5
         typeString: CustomFieldType_Actor
       - title: Conversant
-        value: 1
+        value: 10000
         type: 5
         typeString: CustomFieldType_Actor
       - title: Menu Text
@@ -2795,7 +2814,7 @@ MonoBehaviour:
         value: 
         type: 0
         typeString: 
-      conversationID: 7
+      conversationID: 30006
       isRoot: 0
       isGroup: 0
       nodeColor: 
@@ -2803,9 +2822,9 @@ MonoBehaviour:
       falseConditionAction: Block
       conditionPriority: 2
       outgoingLinks:
-      - originConversationID: 7
+      - originConversationID: 30006
         originDialogueID: 5
-        destinationConversationID: 7
+        destinationConversationID: 30006
         destinationDialogueID: 6
         isConnector: 0
         priority: 2
@@ -2833,11 +2852,11 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Actor
-        value: 1
+        value: 10000
         type: 5
         typeString: CustomFieldType_Actor
       - title: Conversant
-        value: 7
+        value: 20006
         type: 5
         typeString: CustomFieldType_Actor
       - title: Menu Text
@@ -2852,7 +2871,7 @@ MonoBehaviour:
         value: 
         type: 0
         typeString: 
-      conversationID: 7
+      conversationID: 30006
       isRoot: 0
       isGroup: 0
       nodeColor: 
@@ -2860,9 +2879,9 @@ MonoBehaviour:
       falseConditionAction: Block
       conditionPriority: 2
       outgoingLinks:
-      - originConversationID: 7
+      - originConversationID: 30006
         originDialogueID: 6
-        destinationConversationID: 7
+        destinationConversationID: 30006
         destinationDialogueID: 7
         isConnector: 0
         priority: 2
@@ -2888,11 +2907,11 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Actor
-        value: 7
+        value: 20006
         type: 5
         typeString: CustomFieldType_Actor
       - title: Conversant
-        value: 1
+        value: 10000
         type: 5
         typeString: CustomFieldType_Actor
       - title: Menu Text
@@ -2907,7 +2926,7 @@ MonoBehaviour:
         value: 
         type: 0
         typeString: 
-      conversationID: 7
+      conversationID: 30006
       isRoot: 0
       isGroup: 0
       nodeColor: 
@@ -2915,21 +2934,21 @@ MonoBehaviour:
       falseConditionAction: Block
       conditionPriority: 2
       outgoingLinks:
-      - originConversationID: 7
+      - originConversationID: 30006
         originDialogueID: 7
-        destinationConversationID: 7
+        destinationConversationID: 30006
         destinationDialogueID: 8
         isConnector: 0
         priority: 2
-      - originConversationID: 7
+      - originConversationID: 30006
         originDialogueID: 7
-        destinationConversationID: 7
+        destinationConversationID: 30006
         destinationDialogueID: 9
         isConnector: 0
         priority: 2
-      - originConversationID: 7
+      - originConversationID: 30006
         originDialogueID: 7
-        destinationConversationID: 7
+        destinationConversationID: 30006
         destinationDialogueID: 10
         isConnector: 0
         priority: 2
@@ -2955,11 +2974,11 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Actor
-        value: 1
+        value: 10000
         type: 5
         typeString: CustomFieldType_Actor
       - title: Conversant
-        value: 7
+        value: 20006
         type: 5
         typeString: CustomFieldType_Actor
       - title: Menu Text
@@ -2974,7 +2993,7 @@ MonoBehaviour:
         value: 
         type: 0
         typeString: 
-      conversationID: 7
+      conversationID: 30006
       isRoot: 0
       isGroup: 0
       nodeColor: 
@@ -2982,9 +3001,9 @@ MonoBehaviour:
       falseConditionAction: Block
       conditionPriority: 2
       outgoingLinks:
-      - originConversationID: 7
+      - originConversationID: 30006
         originDialogueID: 8
-        destinationConversationID: 7
+        destinationConversationID: 30006
         destinationDialogueID: 11
         isConnector: 0
         priority: 2
@@ -3010,11 +3029,11 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Actor
-        value: 1
+        value: 10000
         type: 5
         typeString: CustomFieldType_Actor
       - title: Conversant
-        value: 7
+        value: 20006
         type: 5
         typeString: CustomFieldType_Actor
       - title: Menu Text
@@ -3029,7 +3048,7 @@ MonoBehaviour:
         value: 
         type: 0
         typeString: 
-      conversationID: 7
+      conversationID: 30006
       isRoot: 0
       isGroup: 0
       nodeColor: 
@@ -3037,9 +3056,9 @@ MonoBehaviour:
       falseConditionAction: Block
       conditionPriority: 2
       outgoingLinks:
-      - originConversationID: 7
+      - originConversationID: 30006
         originDialogueID: 9
-        destinationConversationID: 7
+        destinationConversationID: 30006
         destinationDialogueID: 12
         isConnector: 0
         priority: 2
@@ -3065,11 +3084,11 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Actor
-        value: 1
+        value: 10000
         type: 5
         typeString: CustomFieldType_Actor
       - title: Conversant
-        value: 7
+        value: 20006
         type: 5
         typeString: CustomFieldType_Actor
       - title: Menu Text
@@ -3084,7 +3103,7 @@ MonoBehaviour:
         value: 
         type: 0
         typeString: 
-      conversationID: 7
+      conversationID: 30006
       isRoot: 0
       isGroup: 0
       nodeColor: 
@@ -3114,11 +3133,11 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Actor
-        value: 7
+        value: 20006
         type: 5
         typeString: CustomFieldType_Actor
       - title: Conversant
-        value: 1
+        value: 10000
         type: 5
         typeString: CustomFieldType_Actor
       - title: Menu Text
@@ -3133,7 +3152,7 @@ MonoBehaviour:
         value: 
         type: 0
         typeString: 
-      conversationID: 7
+      conversationID: 30006
       isRoot: 0
       isGroup: 0
       nodeColor: 
@@ -3163,11 +3182,11 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Actor
-        value: 7
+        value: 20006
         type: 5
         typeString: CustomFieldType_Actor
       - title: Conversant
-        value: 1
+        value: 10000
         type: 5
         typeString: CustomFieldType_Actor
       - title: Menu Text
@@ -3182,7 +3201,7 @@ MonoBehaviour:
         value: 
         type: 0
         typeString: 
-      conversationID: 7
+      conversationID: 30006
       isRoot: 0
       isGroup: 0
       nodeColor: 
@@ -3212,11 +3231,11 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Actor
-        value: 1
+        value: 10000
         type: 5
         typeString: CustomFieldType_Actor
       - title: Conversant
-        value: 7
+        value: 20006
         type: 5
         typeString: CustomFieldType_Actor
       - title: Menu Text
@@ -3231,7 +3250,7 @@ MonoBehaviour:
         value: 
         type: 0
         typeString: 
-      conversationID: 7
+      conversationID: 30006
       isRoot: 0
       isGroup: 0
       nodeColor: 
@@ -3261,11 +3280,11 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Actor
-        value: 7
+        value: 20006
         type: 5
         typeString: CustomFieldType_Actor
       - title: Conversant
-        value: 1
+        value: 10000
         type: 5
         typeString: CustomFieldType_Actor
       - title: Menu Text
@@ -3280,7 +3299,7 @@ MonoBehaviour:
         value: 
         type: 0
         typeString: 
-      conversationID: 7
+      conversationID: 30006
       isRoot: 0
       isGroup: 0
       nodeColor: 
@@ -3311,11 +3330,11 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Actor
-        value: 1
+        value: 10000
         type: 5
         typeString: CustomFieldType_Actor
       - title: Conversant
-        value: 7
+        value: 20006
         type: 5
         typeString: CustomFieldType_Actor
       - title: Menu Text
@@ -3330,7 +3349,7 @@ MonoBehaviour:
         value: 
         type: 0
         typeString: 
-      conversationID: 7
+      conversationID: 30006
       isRoot: 0
       isGroup: 0
       nodeColor: 
@@ -3352,7 +3371,7 @@ MonoBehaviour:
     entryGroups: []
     canvasScrollPosition: {x: 0, y: 0}
     canvasZoom: 0.49000064
-  - id: 8
+  - id: 30007
     fields:
     - title: Title
       value: "\u56FE\u4E66\u9986"
@@ -3363,7 +3382,7 @@ MonoBehaviour:
       type: 0
       typeString: 
     - title: Actor
-      value: 1
+      value: 10000
       type: 5
       typeString: CustomFieldType_Actor
     - title: Conversant
@@ -3409,11 +3428,11 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Actor
-        value: 1
+        value: 10000
         type: 5
         typeString: CustomFieldType_Actor
       - title: Conversant
-        value: 3
+        value: 20002
         type: 5
         typeString: CustomFieldType_Actor
       - title: Menu Text
@@ -3428,7 +3447,7 @@ MonoBehaviour:
         value: None()
         type: 0
         typeString: 
-      conversationID: 8
+      conversationID: 30007
       isRoot: 1
       isGroup: 0
       nodeColor: 
@@ -3436,15 +3455,15 @@ MonoBehaviour:
       falseConditionAction: Block
       conditionPriority: 2
       outgoingLinks:
-      - originConversationID: 8
+      - originConversationID: 30007
         originDialogueID: 0
-        destinationConversationID: 8
+        destinationConversationID: 30007
         destinationDialogueID: 1
         isConnector: 0
         priority: 2
-      - originConversationID: 8
+      - originConversationID: 30007
         originDialogueID: 0
-        destinationConversationID: 8
+        destinationConversationID: 30007
         destinationDialogueID: 7
         isConnector: 0
         priority: 2
@@ -3470,11 +3489,11 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Actor
-        value: 3
+        value: 20002
         type: 5
         typeString: CustomFieldType_Actor
       - title: Conversant
-        value: 1
+        value: 10000
         type: 5
         typeString: CustomFieldType_Actor
       - title: Menu Text
@@ -3489,7 +3508,7 @@ MonoBehaviour:
         value: 
         type: 0
         typeString: 
-      conversationID: 8
+      conversationID: 30007
       isRoot: 0
       isGroup: 0
       nodeColor: 
@@ -3497,9 +3516,9 @@ MonoBehaviour:
       falseConditionAction: Block
       conditionPriority: 2
       outgoingLinks:
-      - originConversationID: 8
+      - originConversationID: 30007
         originDialogueID: 1
-        destinationConversationID: 8
+        destinationConversationID: 30007
         destinationDialogueID: 2
         isConnector: 0
         priority: 2
@@ -3530,7 +3549,7 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Actor
-        value: 1
+        value: 10000
         type: 5
         typeString: CustomFieldType_Actor
       - title: Conversant
@@ -3549,7 +3568,7 @@ MonoBehaviour:
         value: 
         type: 0
         typeString: 
-      conversationID: 8
+      conversationID: 30007
       isRoot: 0
       isGroup: 0
       nodeColor: 
@@ -3557,27 +3576,27 @@ MonoBehaviour:
       falseConditionAction: Block
       conditionPriority: 2
       outgoingLinks:
-      - originConversationID: 8
+      - originConversationID: 30007
         originDialogueID: 2
-        destinationConversationID: 8
+        destinationConversationID: 30007
         destinationDialogueID: 3
         isConnector: 0
         priority: 2
-      - originConversationID: 8
+      - originConversationID: 30007
         originDialogueID: 2
-        destinationConversationID: 8
+        destinationConversationID: 30007
         destinationDialogueID: 4
         isConnector: 0
         priority: 2
-      - originConversationID: 8
+      - originConversationID: 30007
         originDialogueID: 2
-        destinationConversationID: 8
+        destinationConversationID: 30007
         destinationDialogueID: 5
         isConnector: 0
         priority: 2
-      - originConversationID: 8
+      - originConversationID: 30007
         originDialogueID: 2
-        destinationConversationID: 8
+        destinationConversationID: 30007
         destinationDialogueID: 6
         isConnector: 0
         priority: 2
@@ -3603,7 +3622,7 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Actor
-        value: 1
+        value: 10000
         type: 5
         typeString: CustomFieldType_Actor
       - title: Conversant
@@ -3622,7 +3641,7 @@ MonoBehaviour:
         value: 
         type: 0
         typeString: 
-      conversationID: 8
+      conversationID: 30007
       isRoot: 0
       isGroup: 0
       nodeColor: 
@@ -3630,9 +3649,9 @@ MonoBehaviour:
       falseConditionAction: Block
       conditionPriority: 2
       outgoingLinks:
-      - originConversationID: 8
+      - originConversationID: 30007
         originDialogueID: 3
-        destinationConversationID: 8
+        destinationConversationID: 30007
         destinationDialogueID: 8
         isConnector: 0
         priority: 2
@@ -3677,7 +3696,7 @@ MonoBehaviour:
         value: 
         type: 0
         typeString: 
-      conversationID: 8
+      conversationID: 30007
       isRoot: 0
       isGroup: 0
       nodeColor: 
@@ -3726,7 +3745,7 @@ MonoBehaviour:
         value: 
         type: 0
         typeString: 
-      conversationID: 8
+      conversationID: 30007
       isRoot: 0
       isGroup: 0
       nodeColor: 
@@ -3775,7 +3794,7 @@ MonoBehaviour:
         value: 
         type: 0
         typeString: 
-      conversationID: 8
+      conversationID: 30007
       isRoot: 0
       isGroup: 0
       nodeColor: 
@@ -3805,11 +3824,11 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Actor
-        value: 3
+        value: 20002
         type: 5
         typeString: CustomFieldType_Actor
       - title: Conversant
-        value: 1
+        value: 10000
         type: 5
         typeString: CustomFieldType_Actor
       - title: Menu Text
@@ -3824,7 +3843,7 @@ MonoBehaviour:
         value: 
         type: 0
         typeString: 
-      conversationID: 8
+      conversationID: 30007
       isRoot: 0
       isGroup: 0
       nodeColor: 
@@ -3832,27 +3851,27 @@ MonoBehaviour:
       falseConditionAction: Block
       conditionPriority: 2
       outgoingLinks:
-      - originConversationID: 8
+      - originConversationID: 30007
         originDialogueID: 7
-        destinationConversationID: 8
+        destinationConversationID: 30007
         destinationDialogueID: 3
         isConnector: 0
         priority: 2
-      - originConversationID: 8
+      - originConversationID: 30007
         originDialogueID: 7
-        destinationConversationID: 8
+        destinationConversationID: 30007
         destinationDialogueID: 4
         isConnector: 0
         priority: 2
-      - originConversationID: 8
+      - originConversationID: 30007
         originDialogueID: 7
-        destinationConversationID: 8
+        destinationConversationID: 30007
         destinationDialogueID: 5
         isConnector: 0
         priority: 2
-      - originConversationID: 8
+      - originConversationID: 30007
         originDialogueID: 7
-        destinationConversationID: 8
+        destinationConversationID: 30007
         destinationDialogueID: 6
         isConnector: 0
         priority: 2
@@ -3878,11 +3897,11 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Actor
-        value: 1
+        value: 10000
         type: 5
         typeString: CustomFieldType_Actor
       - title: Conversant
-        value: 1
+        value: 10000
         type: 5
         typeString: CustomFieldType_Actor
       - title: Menu Text
@@ -3897,7 +3916,7 @@ MonoBehaviour:
         value: 
         type: 0
         typeString: 
-      conversationID: 8
+      conversationID: 30007
       isRoot: 0
       isGroup: 0
       nodeColor: 
@@ -3905,21 +3924,21 @@ MonoBehaviour:
       falseConditionAction: Block
       conditionPriority: 2
       outgoingLinks:
-      - originConversationID: 8
+      - originConversationID: 30007
         originDialogueID: 8
-        destinationConversationID: 8
+        destinationConversationID: 30007
         destinationDialogueID: 9
         isConnector: 0
         priority: 2
-      - originConversationID: 8
+      - originConversationID: 30007
         originDialogueID: 8
-        destinationConversationID: 8
+        destinationConversationID: 30007
         destinationDialogueID: 10
         isConnector: 0
         priority: 2
-      - originConversationID: 8
+      - originConversationID: 30007
         originDialogueID: 8
-        destinationConversationID: 8
+        destinationConversationID: 30007
         destinationDialogueID: 11
         isConnector: 0
         priority: 2
@@ -3945,11 +3964,11 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Actor
-        value: 1
+        value: 10000
         type: 5
         typeString: CustomFieldType_Actor
       - title: Conversant
-        value: 1
+        value: 10000
         type: 5
         typeString: CustomFieldType_Actor
       - title: Menu Text
@@ -3964,7 +3983,7 @@ MonoBehaviour:
         value: 
         type: 0
         typeString: 
-      conversationID: 8
+      conversationID: 30007
       isRoot: 0
       isGroup: 0
       nodeColor: 
@@ -3972,9 +3991,9 @@ MonoBehaviour:
       falseConditionAction: Block
       conditionPriority: 2
       outgoingLinks:
-      - originConversationID: 8
+      - originConversationID: 30007
         originDialogueID: 9
-        destinationConversationID: 8
+        destinationConversationID: 30007
         destinationDialogueID: 12
         isConnector: 0
         priority: 2
@@ -4000,11 +4019,11 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Actor
-        value: 1
+        value: 10000
         type: 5
         typeString: CustomFieldType_Actor
       - title: Conversant
-        value: 1
+        value: 10000
         type: 5
         typeString: CustomFieldType_Actor
       - title: Menu Text
@@ -4019,7 +4038,7 @@ MonoBehaviour:
         value: 
         type: 0
         typeString: 
-      conversationID: 8
+      conversationID: 30007
       isRoot: 0
       isGroup: 0
       nodeColor: 
@@ -4049,11 +4068,11 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Actor
-        value: 1
+        value: 10000
         type: 5
         typeString: CustomFieldType_Actor
       - title: Conversant
-        value: 1
+        value: 10000
         type: 5
         typeString: CustomFieldType_Actor
       - title: Menu Text
@@ -4068,7 +4087,7 @@ MonoBehaviour:
         value: 
         type: 0
         typeString: 
-      conversationID: 8
+      conversationID: 30007
       isRoot: 0
       isGroup: 0
       nodeColor: 
@@ -4098,11 +4117,11 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Actor
-        value: 1
+        value: 10000
         type: 5
         typeString: CustomFieldType_Actor
       - title: Conversant
-        value: 1
+        value: 10000
         type: 5
         typeString: CustomFieldType_Actor
       - title: Menu Text
@@ -4117,7 +4136,7 @@ MonoBehaviour:
         value: 
         type: 0
         typeString: 
-      conversationID: 8
+      conversationID: 30007
       isRoot: 0
       isGroup: 0
       nodeColor: 
@@ -4139,7 +4158,7 @@ MonoBehaviour:
     entryGroups: []
     canvasScrollPosition: {x: 0, y: 0}
     canvasZoom: 0.46000028
-  - id: 9
+  - id: 30008
     fields:
     - title: Title
       value: "\u56FE\u4E66\u9986\u5B66\u4E60\u6210\u529F"
@@ -4150,7 +4169,7 @@ MonoBehaviour:
       type: 0
       typeString: 
     - title: Actor
-      value: 1
+      value: 10000
       type: 5
       typeString: CustomFieldType_Actor
     - title: Conversant
@@ -4196,7 +4215,7 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Actor
-        value: 1
+        value: 10000
         type: 5
         typeString: CustomFieldType_Actor
       - title: Conversant
@@ -4215,7 +4234,7 @@ MonoBehaviour:
         value: None()
         type: 0
         typeString: 
-      conversationID: 9
+      conversationID: 30008
       isRoot: 1
       isGroup: 0
       nodeColor: 
@@ -4223,9 +4242,9 @@ MonoBehaviour:
       falseConditionAction: Block
       conditionPriority: 2
       outgoingLinks:
-      - originConversationID: 9
+      - originConversationID: 30008
         originDialogueID: 0
-        destinationConversationID: 9
+        destinationConversationID: 30008
         destinationDialogueID: 1
         isConnector: 0
         priority: 2
@@ -4251,11 +4270,11 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Actor
-        value: 1
+        value: 10000
         type: 5
         typeString: CustomFieldType_Actor
       - title: Conversant
-        value: 1
+        value: 10000
         type: 5
         typeString: CustomFieldType_Actor
       - title: Menu Text
@@ -4270,7 +4289,7 @@ MonoBehaviour:
         value: 
         type: 0
         typeString: 
-      conversationID: 9
+      conversationID: 30008
       isRoot: 0
       isGroup: 0
       nodeColor: 
@@ -4278,21 +4297,21 @@ MonoBehaviour:
       falseConditionAction: Block
       conditionPriority: 2
       outgoingLinks:
-      - originConversationID: 9
+      - originConversationID: 30008
         originDialogueID: 1
-        destinationConversationID: 9
+        destinationConversationID: 30008
         destinationDialogueID: 2
         isConnector: 0
         priority: 2
-      - originConversationID: 9
+      - originConversationID: 30008
         originDialogueID: 1
-        destinationConversationID: 9
+        destinationConversationID: 30008
         destinationDialogueID: 3
         isConnector: 0
         priority: 2
-      - originConversationID: 9
+      - originConversationID: 30008
         originDialogueID: 1
-        destinationConversationID: 9
+        destinationConversationID: 30008
         destinationDialogueID: 4
         isConnector: 0
         priority: 2
@@ -4318,11 +4337,11 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Actor
-        value: 1
+        value: 10000
         type: 5
         typeString: CustomFieldType_Actor
       - title: Conversant
-        value: 1
+        value: 10000
         type: 5
         typeString: CustomFieldType_Actor
       - title: Menu Text
@@ -4337,7 +4356,7 @@ MonoBehaviour:
         value: 
         type: 0
         typeString: 
-      conversationID: 9
+      conversationID: 30008
       isRoot: 0
       isGroup: 0
       nodeColor: 
@@ -4367,11 +4386,11 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Actor
-        value: 1
+        value: 10000
         type: 5
         typeString: CustomFieldType_Actor
       - title: Conversant
-        value: 1
+        value: 10000
         type: 5
         typeString: CustomFieldType_Actor
       - title: Menu Text
@@ -4386,7 +4405,7 @@ MonoBehaviour:
         value: 
         type: 0
         typeString: 
-      conversationID: 9
+      conversationID: 30008
       isRoot: 0
       isGroup: 0
       nodeColor: 
@@ -4416,11 +4435,11 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Actor
-        value: 1
+        value: 10000
         type: 5
         typeString: CustomFieldType_Actor
       - title: Conversant
-        value: 1
+        value: 10000
         type: 5
         typeString: CustomFieldType_Actor
       - title: Menu Text
@@ -4435,7 +4454,7 @@ MonoBehaviour:
         value: 
         type: 0
         typeString: 
-      conversationID: 9
+      conversationID: 30008
       isRoot: 0
       isGroup: 0
       nodeColor: 
@@ -4457,7 +4476,7 @@ MonoBehaviour:
     entryGroups: []
     canvasScrollPosition: {x: 0, y: 0}
     canvasZoom: 1
-  - id: 10
+  - id: 30009
     fields:
     - title: Title
       value: "\u56FE\u4E66\u9986\u5B66\u4E60\u5931\u8D25"
@@ -4468,7 +4487,7 @@ MonoBehaviour:
       type: 0
       typeString: 
     - title: Actor
-      value: 1
+      value: 10000
       type: 5
       typeString: CustomFieldType_Actor
     - title: Conversant
@@ -4514,7 +4533,7 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Actor
-        value: 1
+        value: 10000
         type: 5
         typeString: CustomFieldType_Actor
       - title: Conversant
@@ -4533,7 +4552,7 @@ MonoBehaviour:
         value: None()
         type: 0
         typeString: 
-      conversationID: 10
+      conversationID: 30009
       isRoot: 1
       isGroup: 0
       nodeColor: 
@@ -4541,9 +4560,9 @@ MonoBehaviour:
       falseConditionAction: Block
       conditionPriority: 2
       outgoingLinks:
-      - originConversationID: 10
+      - originConversationID: 30009
         originDialogueID: 0
-        destinationConversationID: 10
+        destinationConversationID: 30009
         destinationDialogueID: 1
         isConnector: 0
         priority: 2
@@ -4569,11 +4588,11 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Actor
-        value: 1
+        value: 10000
         type: 5
         typeString: CustomFieldType_Actor
       - title: Conversant
-        value: 1
+        value: 10000
         type: 5
         typeString: CustomFieldType_Actor
       - title: Menu Text
@@ -4588,7 +4607,7 @@ MonoBehaviour:
         value: 
         type: 0
         typeString: 
-      conversationID: 10
+      conversationID: 30009
       isRoot: 0
       isGroup: 0
       nodeColor: 
@@ -4596,15 +4615,15 @@ MonoBehaviour:
       falseConditionAction: Block
       conditionPriority: 2
       outgoingLinks:
-      - originConversationID: 10
+      - originConversationID: 30009
         originDialogueID: 1
-        destinationConversationID: 10
+        destinationConversationID: 30009
         destinationDialogueID: 2
         isConnector: 0
         priority: 2
-      - originConversationID: 10
+      - originConversationID: 30009
         originDialogueID: 1
-        destinationConversationID: 10
+        destinationConversationID: 30009
         destinationDialogueID: 3
         isConnector: 0
         priority: 2
@@ -4630,11 +4649,11 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Actor
-        value: 2
+        value: 10001
         type: 5
         typeString: CustomFieldType_Actor
       - title: Conversant
-        value: 1
+        value: 10000
         type: 5
         typeString: CustomFieldType_Actor
       - title: Menu Text
@@ -4649,7 +4668,7 @@ MonoBehaviour:
         value: 
         type: 0
         typeString: 
-      conversationID: 10
+      conversationID: 30009
       isRoot: 0
       isGroup: 0
       nodeColor: 
@@ -4679,11 +4698,11 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Actor
-        value: 7
+        value: 20006
         type: 5
         typeString: CustomFieldType_Actor
       - title: Conversant
-        value: 1
+        value: 10000
         type: 5
         typeString: CustomFieldType_Actor
       - title: Menu Text
@@ -4698,7 +4717,7 @@ MonoBehaviour:
         value: 
         type: 0
         typeString: 
-      conversationID: 10
+      conversationID: 30009
       isRoot: 0
       isGroup: 0
       nodeColor: 
@@ -4720,7 +4739,7 @@ MonoBehaviour:
     entryGroups: []
     canvasScrollPosition: {x: 0, y: 0}
     canvasZoom: 1
-  - id: 11
+  - id: 30010
     fields:
     - title: Title
       value: "\u804A\u5929"
@@ -4731,11 +4750,11 @@ MonoBehaviour:
       type: 0
       typeString: 
     - title: Actor
-      value: 1
+      value: 10000
       type: 5
       typeString: CustomFieldType_Actor
     - title: Conversant
-      value: 7
+      value: 20006
       type: 5
       typeString: CustomFieldType_Actor
     overrideSettings:
@@ -4777,11 +4796,11 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Actor
-        value: 1
+        value: 10000
         type: 5
         typeString: CustomFieldType_Actor
       - title: Conversant
-        value: 7
+        value: 20006
         type: 5
         typeString: CustomFieldType_Actor
       - title: Menu Text
@@ -4796,7 +4815,7 @@ MonoBehaviour:
         value: None()
         type: 0
         typeString: 
-      conversationID: 11
+      conversationID: 30010
       isRoot: 1
       isGroup: 0
       nodeColor: 
@@ -4804,21 +4823,21 @@ MonoBehaviour:
       falseConditionAction: Block
       conditionPriority: 2
       outgoingLinks:
-      - originConversationID: 11
+      - originConversationID: 30010
         originDialogueID: 0
-        destinationConversationID: 11
+        destinationConversationID: 30010
         destinationDialogueID: 1
         isConnector: 0
         priority: 2
-      - originConversationID: 11
+      - originConversationID: 30010
         originDialogueID: 0
-        destinationConversationID: 11
+        destinationConversationID: 30010
         destinationDialogueID: 2
         isConnector: 0
         priority: 2
-      - originConversationID: 11
+      - originConversationID: 30010
         originDialogueID: 0
-        destinationConversationID: 11
+        destinationConversationID: 30010
         destinationDialogueID: 3
         isConnector: 0
         priority: 2
@@ -4844,11 +4863,11 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Actor
-        value: 7
+        value: 20006
         type: 5
         typeString: CustomFieldType_Actor
       - title: Conversant
-        value: 1
+        value: 10000
         type: 5
         typeString: CustomFieldType_Actor
       - title: Menu Text
@@ -4863,7 +4882,7 @@ MonoBehaviour:
         value: 
         type: 0
         typeString: 
-      conversationID: 11
+      conversationID: 30010
       isRoot: 0
       isGroup: 0
       nodeColor: 
@@ -4871,9 +4890,9 @@ MonoBehaviour:
       falseConditionAction: Block
       conditionPriority: 2
       outgoingLinks:
-      - originConversationID: 11
+      - originConversationID: 30010
         originDialogueID: 1
-        destinationConversationID: 11
+        destinationConversationID: 30010
         destinationDialogueID: 4
         isConnector: 0
         priority: 2
@@ -4899,11 +4918,11 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Actor
-        value: 7
+        value: 20006
         type: 5
         typeString: CustomFieldType_Actor
       - title: Conversant
-        value: 1
+        value: 10000
         type: 5
         typeString: CustomFieldType_Actor
       - title: Menu Text
@@ -4918,7 +4937,7 @@ MonoBehaviour:
         value: 
         type: 0
         typeString: 
-      conversationID: 11
+      conversationID: 30010
       isRoot: 0
       isGroup: 0
       nodeColor: 
@@ -4948,11 +4967,11 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Actor
-        value: 7
+        value: 20006
         type: 5
         typeString: CustomFieldType_Actor
       - title: Conversant
-        value: 1
+        value: 10000
         type: 5
         typeString: CustomFieldType_Actor
       - title: Menu Text
@@ -4967,7 +4986,7 @@ MonoBehaviour:
         value: 
         type: 0
         typeString: 
-      conversationID: 11
+      conversationID: 30010
       isRoot: 0
       isGroup: 0
       nodeColor: 
@@ -4997,11 +5016,11 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Actor
-        value: 1
+        value: 10000
         type: 5
         typeString: CustomFieldType_Actor
       - title: Conversant
-        value: 7
+        value: 20006
         type: 5
         typeString: CustomFieldType_Actor
       - title: Menu Text
@@ -5016,7 +5035,7 @@ MonoBehaviour:
         value: 
         type: 0
         typeString: 
-      conversationID: 11
+      conversationID: 30010
       isRoot: 0
       isGroup: 0
       nodeColor: 
@@ -5024,15 +5043,15 @@ MonoBehaviour:
       falseConditionAction: Block
       conditionPriority: 2
       outgoingLinks:
-      - originConversationID: 11
+      - originConversationID: 30010
         originDialogueID: 4
-        destinationConversationID: 11
+        destinationConversationID: 30010
         destinationDialogueID: 5
         isConnector: 0
         priority: 2
-      - originConversationID: 11
+      - originConversationID: 30010
         originDialogueID: 4
-        destinationConversationID: 11
+        destinationConversationID: 30010
         destinationDialogueID: 6
         isConnector: 0
         priority: 2
@@ -5058,11 +5077,11 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Actor
-        value: 7
+        value: 20006
         type: 5
         typeString: CustomFieldType_Actor
       - title: Conversant
-        value: 1
+        value: 10000
         type: 5
         typeString: CustomFieldType_Actor
       - title: Menu Text
@@ -5077,7 +5096,7 @@ MonoBehaviour:
         value: 
         type: 0
         typeString: 
-      conversationID: 11
+      conversationID: 30010
       isRoot: 0
       isGroup: 0
       nodeColor: 
@@ -5107,11 +5126,11 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Actor
-        value: 7
+        value: 20006
         type: 5
         typeString: CustomFieldType_Actor
       - title: Conversant
-        value: 1
+        value: 10000
         type: 5
         typeString: CustomFieldType_Actor
       - title: Menu Text
@@ -5126,7 +5145,7 @@ MonoBehaviour:
         value: 
         type: 0
         typeString: 
-      conversationID: 11
+      conversationID: 30010
       isRoot: 0
       isGroup: 0
       nodeColor: 
@@ -5149,10 +5168,10 @@ MonoBehaviour:
     canvasScrollPosition: {x: 0, y: 0}
     canvasZoom: 1.03
   syncInfo:
-    syncActors: 0
+    syncActors: 1
     syncItems: 0
     syncLocations: 0
-    syncVariables: 0
+    syncVariables: 1
     syncActorsDatabase: {fileID: 0}
     syncItemsDatabase: {fileID: 0}
     syncLocationsDatabase: {fileID: 0}
