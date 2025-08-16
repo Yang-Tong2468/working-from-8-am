@@ -28,7 +28,15 @@ public class PlayerController : MonoBehaviour
         float z = Input.GetAxis("Vertical"); // 在3D空间中，前后移动是Z轴
         moveDirection = new Vector3(x, 0, z).normalized;
 
-        Debug.Log($"Move Direction: {moveDirection}");
+
+        if(Input.GetKeyDown("a"))
+            {
+            Debug.Log("A键被按下");
+        }
+        else if(Input.GetKeyDown("d"))
+        {
+            Debug.Log("D键被按下");
+        }
 
         if (x < 0)
         {
@@ -46,7 +54,11 @@ public class PlayerController : MonoBehaviour
 
         Vector3 finalMove = CalculateStepAndGround(targetVelocity * Time.fixedDeltaTime);
 
+        Debug.Log($"Final Move: {finalMove}");
+
         rb.MovePosition(rb.position + finalMove);
+
+        Debug.Log($"Rigidbody Position: {rb.position}");
     }
 
     /// <summary>
